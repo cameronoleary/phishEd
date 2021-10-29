@@ -24,50 +24,62 @@ export const PHISHING_IMAGES = [
     {
         src: Amazon,
         phish: true,
+        description: '',
     },
     {
         src: CanImmunize,
         phish: true,
+        description: '',
     },
     {
         src: DonnaFraser,
         phish: true,
+        description: '',
     },
     {
         src: EastUniversity,
         phish: true,
+        description: '',
     },
     {
         src: FedEx,
         phish: true,
+        description: '',
     },
     {
         src: HarryR,
         phish: true,
+        description: '',
     },
     {
         src: Instacart,
         phish: true,
+        description: '',
     },
     {
         src: Netflix,
         phish: true,
+        description: '',
     },
     {
         src: PayPal,
         phish: true,
+        description: '',
     },
     {
         src: Scotiabank,
         phish: true,
+        description: '',
     },
     {
         src: Strava,
         phish: true,
+        description: '',
     },
     {
         src: TedGarcia,
         phish: true,
+        description: '',
     },
 ];
 
@@ -75,25 +87,31 @@ export const LEGITIMATE_IMAGES = [
     {
         src: Arcteryx,
         phish: false,
+        description: '',
     },
     {
         src: Cra,
         phish: false,
+        description: '',
     },
     {
         src: Dropbox,
         phish: false,
+        description: '',
     },
     {
         src: Ebay,
         phish: false,
+        description: '',
     },
     {
         src: OneOfZero,
         phish: false,
+        description: '',
     },
     {
         src: ServiceOntario,
         phish: false,
+        description: '',
     },
 ];
