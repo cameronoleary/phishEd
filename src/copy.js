@@ -2,7 +2,7 @@ export default {
     title: 'phishEd',
     landingPage: {
         header: {
-            about: 'phishEd (Phishing Education) will help you learn about phishing. You will learn about what phishing is, the stages of a phishing attack, the common types of phishing, and how to prevent phishing attacks. Remember to test your understanding by taking the short quiz at the bottom of this page!',
+            about: 'phishEd (Phishing Education) is a quick and easy way to learn about phishing. You will learn about what phishing is, the stages of a phishing attack, the common types of phishing, and how to prevent phishing attacks. Remember to test your understanding by taking the short quiz at the bottom of this page!',
         },
         content: {
             whatIsPhishing: {

@@ -20,6 +20,7 @@ const useStyles = makeStyles({
     title: {
         fontSize: '6rem',
         fontWeight: 'bold',
+        fontStyle: 'italic',
         marginBottom: '2.5rem',
     },
 });
