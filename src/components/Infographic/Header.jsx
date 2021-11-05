@@ -9,7 +9,6 @@ const useStyles = makeStyles({
     container: {
         display: 'flex',
         flexWrap: 'wrap',
-        maxWidth: '50rem',
         justifyContent: 'center',
     },
     paragraph: {

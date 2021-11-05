@@ -27,10 +27,10 @@ const useStyles = makeStyles({
     container: {
         display: 'flex',
         flexWrap: 'wrap',
-        maxWidth: '50rem',
         justifyContent: 'center',
     },
     paragraph: {
+        color: 'white',
         fontSize: '1.125rem',
         marginBottom: '1rem',
         lineHeight: '1.875rem',

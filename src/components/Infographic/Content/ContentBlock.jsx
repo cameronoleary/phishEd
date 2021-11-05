@@ -5,20 +5,23 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles({
     container: (isList) => ({
         padding: '1rem',
-        maxWidth: '50rem',
+        boxShadow: '5px 10px',
         borderRadius: '.313rem',
         margin: '1.875rem 0 2.5rem',
         border: 'solid .063rem black',
     }),
     header: {
+        color: 'white',
         fontWeight: 'bold',
         fontSize: '2.25rem',
     },
     text: {
+        color: 'white',
         fontSize: '1.125rem',
         lineHeight: '1.875rem',
     },
     list: {
+        color: 'white',
         textAlign: 'left',
         fontSize: '1.125rem',
         lineHeight: '1.875rem',
