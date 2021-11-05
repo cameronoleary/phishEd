@@ -12,7 +12,7 @@ import LandingPage from './components/LandingPage';
 const useStyles = makeStyles({
   wave: {
       zIndex: '-1',
-      height: '55vh',
+      height: '61vh',
       position: 'absolute',
       transform: 'rotate(180deg)',
   },
@@ -29,9 +29,9 @@ const App = () => {
         paused={false}
         options={{
           height: 20,
-          amplitude: 25,
-          speed: 0.1,
-          points: 5,
+          amplitude: 50,
+          speed: 0.15,
+          points: 8,
         }}
       />
       <Router>
