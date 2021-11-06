@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 
 // Internal
 import copy from '../../copy';
+import Logo from '../Logo';
 
 const useStyles = makeStyles({
     container: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles({
     paragraph: {
         fontSize: '1.125rem',
         lineHeight: '1.875rem',
-        marginBottom: '2.5rem',
+        marginBottom: '5rem',
     },
     title: {
         fontSize: '6rem',
@@ -29,6 +30,7 @@ const Header = () => {
 
     return (
         <div className={classes.container}>
+            <Logo />
             <span className={classes.title}>{copy.title}</span>
             <span className={classes.paragraph}>
                 {copy.landingPage.header.about}

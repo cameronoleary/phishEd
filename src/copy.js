@@ -22,23 +22,28 @@ export default {
                     items: [
                         {
                             name: 'Email phishing',
-                            description: '',
+                            description:
+                                'a generic email that typically contains a link to a malicious website or a file attachment that installs malware onto your computer.',
                         },
                         {
                             name: 'Spear phishing',
-                            description: '',
+                            description:
+                                'a type of email phishing that uses specific information about you or the organization you work for.',
                         },
                         {
                             name: 'HTTPS phishing',
-                            description: '',
+                            description:
+                                'a link posing to be safe to click. HTTPS is used by most modern websites which increases the difficulty in identifying its level of security.',
                         },
                         {
                             name: 'Vishing',
-                            description: '',
+                            description:
+                                'voice phishing; a call to an individual stressing urgency and panic in request of personal information or money.',
                         },
                         {
                             name: 'Smishing',
-                            description: '',
+                            description:
+                                'SMS phishing; a text message to an individual that requires action similar to that of vishing.',
                         },
                     ],
                 },
@@ -53,8 +58,8 @@ export default {
                     text: 'increase in spear phishing attacks since the end of February 2021.',
                 },
                 {
-                    header: '$17,700 per minute',
-                    text: 'lost by businesses due to phishing attacks.',
+                    header: '$17,700',
+                    text: 'per minute lost by businesses due to phishing attacks.',
                 },
             ],
             howToPreventPhishingAttacks: {

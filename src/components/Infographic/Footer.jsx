@@ -46,7 +46,7 @@ const Footer = () => {
                 {copy.landingPage.footer.paragraph}
             </span>
             <Link className={classes.button} to={ROUTES.QUIZ}>
-                <button className={classes.button}>
+                <button variant='contained' className={classes.button}>
                     {copy.landingPage.footer.buttonLabel}
                 </button>
             </Link>

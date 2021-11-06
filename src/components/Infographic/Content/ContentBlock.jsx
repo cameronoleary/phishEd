@@ -26,6 +26,9 @@ const useStyles = makeStyles({
         fontSize: '1.125rem',
         lineHeight: '1.875rem',
     },
+    name: {
+        fontWeight: 'bold',
+    },
 });
 
 const ContentBlock = (props) => {
@@ -41,7 +44,12 @@ const ContentBlock = (props) => {
                 {list?.items && (
                     <ul className={classes.list}>
                         {list.items.map((item, i) => (
-                            <li>{item.name}</li>
+                            <li>
+                                <span className={classes.name}>
+                                    {item.name}
+                                </span>
+                                {item.description && `: ${item.description}`}
+                            </li>
                         ))}
                     </ul>
                 )}

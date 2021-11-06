@@ -23,6 +23,7 @@ const useStyles = makeStyles({
         width: '100%',
         display: 'flex',
         flexWrap: 'wrap',
+        maxWidth: '50rem',
         margin: '1rem 0 1rem 0',
         justifyContent: 'center',
     },
