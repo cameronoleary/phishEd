@@ -1,5 +1,6 @@
 // External
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { makeStyles } from '@material-ui/styles';
 
 // Internal
@@ -30,11 +31,15 @@ const Header = () => {
 
     return (
         <div className={classes.container}>
-            <Logo />
-            <span className={classes.title}>{copy.title}</span>
-            <span className={classes.paragraph}>
-                {copy.landingPage.header.about}
-            </span>
+            <Fade top>
+                <Logo />
+                <span className={classes.title}>{copy.title}</span>
+            </Fade>
+            <Fade bottom>
+                <span className={classes.paragraph}>
+                    {copy.landingPage.header.about}
+                </span>
+            </Fade>
         </div>
     );
 };

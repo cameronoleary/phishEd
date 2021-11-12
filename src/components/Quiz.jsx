@@ -1,7 +1,16 @@
 // External
 import React, { useEffect, useState } from 'react';
+import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import { makeStyles } from '@material-ui/styles';
+
+// Assets
+import HomeIcon from '@mui/icons-material/Home';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
+import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 // Internal
 import copy from '../copy';
@@ -106,32 +115,42 @@ const Quiz = () => {
                         {images[next].description}
                     </p>
                     {showNext ? (
-                        <button className={classes.button} onClick={handleNext}>
+                        <Button
+                            variant='contained'
+                            endIcon={<NavigateNextIcon />}
+                            onClick={handleNext}
+                        >
                             {nextButtonText}
-                        </button>
+                        </Button>
                     ) : (
-                        <>
-                            <button
-                                className={classes.button}
+                        <Stack spacing={2} direction='row'>
+                            <Button
+                                variant='contained'
+                                startIcon={<WarningIcon />}
                                 onClick={() => handleClick(1)}
                             >
                                 {copy.quiz.buttons.labels.phishing}
-                            </button>
-                            <button
-                                className={classes.button}
+                            </Button>
+                            <Button
+                                variant='contained'
+                                endIcon={<MarkEmailReadIcon />}
                                 onClick={() => handleClick(2)}
                             >
                                 {copy.quiz.buttons.labels.legitimate}
-                            </button>
-                        </>
+                            </Button>
+                        </Stack>
                     )}
                 </div>
             )}
-            <div className={classes.paragraph}>
-                <img alt='img' src={images[next].src} />
-            </div>
+            <Fade top>
+                <div className={classes.paragraph}>
+                    <img alt='img' src={images[next].src} />
+                </div>
+            </Fade>
             <Link to={ROUTES.LANDING_PAGE}>
-                <button className={classes.button}>Home</button>
+                <Button variant='contained' startIcon={<HomeIcon />}>
+                    Home
+                </Button>
             </Link>
         </div>
     );

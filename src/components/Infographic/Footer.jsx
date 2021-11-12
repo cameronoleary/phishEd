@@ -1,29 +1,18 @@
 // External
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
 import { makeStyles } from '@material-ui/styles';
+
+// Assets
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 // Internal
 import copy from '../../copy';
 import { ROUTES } from '../../constants';
 
 const useStyles = makeStyles({
-    button: {
-        width: '8rem',
-        height: '2rem',
-        cursor: 'pointer',
-        marginRight: '1rem',
-        borderRadius: '.313rem',
-        '&:last-child': {
-            marginRight: 0,
-        },
-    },
-    buttonContainer: {
-        width: '100%',
-        display: 'flex',
-        margin: '1rem 0 1rem 0',
-        justifyContent: 'center',
-    },
     container: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -41,16 +30,18 @@ const Footer = () => {
     const classes = useStyles();
 
     return (
-        <div className={classes.container}>
-            <span className={classes.paragraph}>
-                {copy.landingPage.footer.paragraph}
-            </span>
-            <Link className={classes.button} to={ROUTES.QUIZ}>
-                <button variant='contained' className={classes.button}>
-                    {copy.landingPage.footer.buttonLabel}
-                </button>
-            </Link>
-        </div>
+        <Fade bottom>
+            <div className={classes.container}>
+                <span className={classes.paragraph}>
+                    {copy.landingPage.footer.paragraph}
+                </span>
+                <Link className={classes.button} to={ROUTES.QUIZ}>
+                    <Button variant='contained' endIcon={<NavigateNextIcon />}>
+                        {copy.landingPage.footer.buttonLabel}
+                    </Button>
+                </Link>
+            </div>
+        </Fade>
     );
 };
 

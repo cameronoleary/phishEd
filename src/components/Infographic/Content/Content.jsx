@@ -1,5 +1,6 @@
 // External
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { makeStyles } from '@material-ui/styles';
 
 // Internal
@@ -21,6 +22,7 @@ const useStyles = makeStyles({
 });
 
 const Content = () => {
+    let flag = 0;
     const classes = useStyles();
 
     const copyPrefix = copy.landingPage.content;
@@ -35,17 +37,43 @@ const Content = () => {
 
     return (
         <div>
-            <ContentBlock {...copyPrefix.whatIsPhishing} />
-            <ContentBlockImage {...stagesInAPhishingAttack} />
-            <ContentBlock {...copyPrefix.commonTypesOfPhishing} />
+            <Fade left>
+                <ContentBlock {...copyPrefix.whatIsPhishing} />
+            </Fade>
+            <Fade right>
+                <ContentBlockImage {...stagesInAPhishingAttack} />
+            </Fade>
+            <Fade left>
+                <ContentBlock {...copyPrefix.commonTypesOfPhishing} />
+            </Fade>
             <div className={classes.factsContainer}>
-                {copyPrefix.facts.map((fact, i) => (
-                    <div className={classes.fact}>
-                        <ContentBlock key={i} {...fact} />
-                    </div>
-                ))}
+                {copyPrefix.facts.map((fact, idx) => {
+                    if (flag === 0) {
+                        flag = 1;
+
+                        return (
+                            <Fade top>
+                                <div key={idx} className={classes.fact}>
+                                    <ContentBlock {...fact} />
+                                </div>
+                            </Fade>
+                        );
+                    }
+
+                    flag = 0;
+
+                    return (
+                        <Fade bottom>
+                            <div key={idx} className={classes.fact}>
+                                <ContentBlock {...fact} />
+                            </div>
+                        </Fade>
+                    );
+                })}
             </div>
-            <ContentBlock {...copyPrefix.howToPreventPhishingAttacks} />
+            <Fade right>
+                <ContentBlock {...copyPrefix.howToPreventPhishingAttacks} />
+            </Fade>
         </div>
     );
 };
