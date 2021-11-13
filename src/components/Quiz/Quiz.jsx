@@ -13,9 +13,11 @@ import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 // Internal
-import copy from '../copy';
-import { getImages } from '../utils/quiz';
-import { ROUTES } from '../constants';
+import Email from './Email';
+import copy from '../../copy';
+import { ROUTES } from '../../constants';
+import { getImages } from '../../utils/quiz';
+import ContentBlock from '../Infographic/Content/ContentBlock';
 
 const useStyles = makeStyles({
     button: {
@@ -32,8 +34,7 @@ const useStyles = makeStyles({
         width: '100%',
         display: 'flex',
         flexWrap: 'wrap',
-        maxWidth: '50rem',
-        margin: '1rem 0 1rem 0',
+        marginTop: '1rem',
         justifyContent: 'center',
     },
     container: {
@@ -110,48 +111,64 @@ const Quiz = () => {
                 >{`Your score is ${score}/${images.length}`}</p>
             )}
             {!finished && (
-                <div className={classes.buttonContainer}>
-                    <p className={classes.paragraph}>
-                        {images[next].description}
-                    </p>
-                    {showNext ? (
-                        <Button
-                            variant='contained'
-                            endIcon={<NavigateNextIcon />}
-                            onClick={handleNext}
-                        >
-                            {nextButtonText}
-                        </Button>
-                    ) : (
-                        <Stack spacing={2} direction='row'>
-                            <Button
-                                variant='contained'
-                                startIcon={<WarningIcon />}
-                                onClick={() => handleClick(1)}
-                            >
-                                {copy.quiz.buttons.labels.phishing}
-                            </Button>
-                            <Button
-                                variant='contained'
-                                endIcon={<MarkEmailReadIcon />}
-                                onClick={() => handleClick(2)}
-                            >
-                                {copy.quiz.buttons.labels.legitimate}
-                            </Button>
-                        </Stack>
-                    )}
-                </div>
+                <Fade top>
+                    <ContentBlock text={images[next].description}>
+                        <div className={classes.buttonContainer}>
+                            {showNext ? (
+                                <Button
+                                    sx={{
+                                        backgroundColor: '#f26721',
+                                    }}
+                                    variant='contained'
+                                    endIcon={<NavigateNextIcon />}
+                                    onClick={handleNext}
+                                >
+                                    {nextButtonText}
+                                </Button>
+                            ) : (
+                                <Stack spacing={2} direction='row'>
+                                    <Button
+                                        sx={{
+                                            backgroundColor: '#f26721',
+                                        }}
+                                        variant='contained'
+                                        startIcon={<WarningIcon />}
+                                        onClick={() => handleClick(1)}
+                                    >
+                                        {copy.quiz.buttons.labels.phishing}
+                                    </Button>
+                                    <Button
+                                        sx={{
+                                            backgroundColor: '#f26721',
+                                        }}
+                                        variant='contained'
+                                        endIcon={<MarkEmailReadIcon />}
+                                        onClick={() => handleClick(2)}
+                                    >
+                                        {copy.quiz.buttons.labels.legitimate}
+                                    </Button>
+                                </Stack>
+                            )}
+                        </div>
+                    </ContentBlock>
+                    <div className={classes.paragraph}>
+                        <img alt='img' src={images[next].src} />
+                    </div>
+                </Fade>
             )}
-            <Fade top>
-                <div className={classes.paragraph}>
-                    <img alt='img' src={images[next].src} />
-                </div>
+            <Fade bottom>
+                <Link to={ROUTES.LANDING_PAGE}>
+                    <Button
+                        sx={{
+                            backgroundColor: '#f26721',
+                        }}
+                        variant='contained'
+                        startIcon={<HomeIcon />}
+                    >
+                        Home
+                    </Button>
+                </Link>
             </Fade>
-            <Link to={ROUTES.LANDING_PAGE}>
-                <Button variant='contained' startIcon={<HomeIcon />}>
-                    Home
-                </Button>
-            </Link>
         </div>
     );
 };

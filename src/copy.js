@@ -7,13 +7,39 @@ export default {
         content: {
             whatIsPhishing: {
                 header: 'What Is Phishing?',
-                text: 'Phishing is an attack carried out by criminals using deceptive tricks in order to gain your trust or the trust of an organization with the intent to steal sensitive information. For example, a criminal may target you by pretending to be the representative of your banking institution in an attempt to obtain your credit card information or social insurance number.',
+                text: 'Phishing is an attack carried out by criminals using deceptive tricks to gain your trust or the trust of an organization with the intent to steal sensitive information. For example, a criminal may target you by pretending to be the representative of your banking institution in an attempt to obtain your credit card information or social insurance number.',
             },
             stagesInAPhishingAttack: {
                 header: 'Stages in a Phishing Attack',
-                image: {
-                    alt: 'Diagram of the stages in a phishing attack',
-                },
+                stages: [
+                    {
+                        text: 'An attacker sends you a forged email that contains a malicious link.',
+                    },
+                    {
+                        text: "You the click the link and are brought to a fradulent website on the attacker's web server.",
+                    },
+                    {
+                        text: 'The seemingly legitimate website asks for your information.',
+                    },
+                    {
+                        text: 'You give sensitive information.',
+                    },
+                    {
+                        text: 'Your sensitive information is transmitted to the attacker.',
+                    },
+                    {
+                        text: 'The attacker impersonates you and requests a withdrawal from your bank account.',
+                    },
+                    {
+                        text: 'Your money is taken by fraud.',
+                    },
+                ],
+                sources: [
+                    {
+                        name: 'Analysis of Phishing Attacks and Countermeasures on ResearchGate',
+                        link: 'https://www.researchgate.net/figure/Stages-in-a-Phishing-attack_fig1_235947501',
+                    },
+                ],
             },
             commonTypesOfPhishing: {
                 header: 'Common Types of Phishing',
@@ -57,7 +83,7 @@ export default {
                         {
                             name: 'Clone phishing',
                             description:
-                                'an email with near-identical characteristics of a previously received legitimate email with the links or attachments replaced with malicious ones.',
+                                'an email with near-identical characteristics of a legitimate email you had previously received with the links or attachments replaced with malicious ones.',
                             sources: [
                                 {
                                     name: 'Cofense',
@@ -209,8 +235,8 @@ export default {
         },
         footer: {
             paragraph:
-                'As you may have learned, emails are one of the most common sources of a phishing attack. It can sometimes be difficult to distinguish phishing emails from legitimate ones. Try your hand at identifying phishing emails by taking a short quiz!',
-            buttonLabel: 'Start Quiz',
+                'As you may have learned, emails are one of the most common sources of a phishing attack. It can sometimes be difficult to distinguish phishing emails from legitimate ones. Try your hand at identifying phishing emails by taking our quiz!',
+            buttonLabel: 'Take Quiz',
         },
     },
     quiz: {

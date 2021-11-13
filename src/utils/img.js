@@ -25,7 +25,7 @@ export const PHISHING_IMAGES = [
         src: Amazon,
         phish: true,
         description:
-            'Amazon.com, Inc. is an ecommerce focused company. They sell books, video games, music, movies, electronics, and more. You have received an email that telling you that there was an error while attempting to refund your credit card. Can you determine if this is a phishing or legitimate email?',
+            'Amazon is an ecommerce focused company. They sell books, video games, music, movies, electronics, and more. You have received an email that telling you that there was an error while attempting to refund your credit card. Can you determine if this is a phishing or legitimate email?',
     },
     {
         src: CanImmunize,
@@ -49,7 +49,7 @@ export const PHISHING_IMAGES = [
         src: FedEx,
         phish: true,
         description:
-            'FedEx (Federal Express) is a delivery service company. They transport packages all around the world and among the top contractors of the United States government. You have received an email informing you that your package is on its way. Can you determine if this is a phishing or legitimate email?',
+            'FedEx is a delivery service company. They transport packages all around the world and among the top contractors of the United States government. You have received an email informing you that your package is on its way. Can you determine if this is a phishing or legitimate email?',
     },
     {
         src: HarryR,
@@ -67,13 +67,13 @@ export const PHISHING_IMAGES = [
         src: Netflix,
         phish: true,
         description:
-            'Netflix, Inc. is a subscription-based media service. They offer a wide variety of movies and TV shows. You have received an email to reset the password for your Netflix account. Can you determine if this is a phishing or legitimate email?',
+            'Netflix is a subscription-based media service. They offer a wide variety of movies and TV shows. You have received an email to reset the password for your Netflix account. Can you determine if this is a phishing or legitimate email?',
     },
     {
         src: PayPal,
         phish: true,
         description:
-            'PayPal Holdings, Inc. is a financial technology company. PayPal users can send and receive money, and make online payments securely. You have received a confirmation of payment email amounting to $300 CAD against your account. Can you determine if this is a phishing or legitimate email?',
+            'PayPal  is a financial technology company. PayPal users can send and receive money, and make online payments securely. You have received a confirmation of payment email amounting to $300 CAD against your account. Can you determine if this is a phishing or legitimate email?',
     },
     {
         src: Scotiabank,
@@ -112,13 +112,13 @@ export const LEGITIMATE_IMAGES = [
         src: Dropbox,
         phish: false,
         description:
-            'Dropbox, Inc. is a cloud storage service for files. It allows you to sign in from any device and access your files. You have received an email asking you to confirm a recent sign in. Can you determine if this is a phishing or legitimate email?',
+            'Dropbox is a cloud storage service for files. It allows you to sign in from any device and access your files. You have received an email asking you to confirm a recent sign in. Can you determine if this is a phishing or legitimate email?',
     },
     {
         src: Ebay,
         phish: false,
         description:
-            'eBay Inc. is an ecommerce corporation. They focus on customer-to-customer and business-to-customer sales in over 100 markets. You are a frequent buyer and occasional seller on eBay. You have received an email encouraging you to protect your account by confirming your information. Can you determine if this is a phishing or legitimate email?',
+            'eBay is an ecommerce corporation. They focus on customer-to-customer and business-to-customer sales in over 100 markets. You are a frequent buyer and occasional seller on eBay. You have received an email encouraging you to protect your account by confirming your information. Can you determine if this is a phishing or legitimate email?',
     },
     {
         src: OneOfZero,

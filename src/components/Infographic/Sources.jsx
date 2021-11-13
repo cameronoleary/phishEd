@@ -2,18 +2,27 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 
+// Assets
+import LaunchIcon from '@mui/icons-material/Launch';
+
 const useStyles = makeStyles({
     comma: {
         margin: 0,
     },
     container: {
-        color: 'white',
-        display: 'inline-block',
-    },
-    link: {
         color: 'black',
     },
+    icon: {
+        top: '.375rem',
+        position: 'relative',
+    },
+    link: {
+        color: '#f26721',
+        fontWeight: 'bold',
+        fontSize: '1.125rem',
+    },
     list: {
+        margin: 0,
         padding: 0,
         listStyle: 'none',
         display: 'inline-flex',
@@ -35,7 +44,6 @@ const Sources = ({ sources }) => {
 
     return (
         <div className={classes.container}>
-            {'['}
             <ul className={classes.list}>
                 {sources.map((source, idx) => (
                     <li key={idx}>
@@ -45,11 +53,11 @@ const Sources = ({ sources }) => {
                             className={classes.link}
                         >
                             {source.name}
+                            <LaunchIcon className={classes.icon} />
                         </a>
                     </li>
                 ))}
             </ul>
-            {']'}
         </div>
     );
 };

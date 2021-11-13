@@ -19,10 +19,12 @@ const useStyles = makeStyles({
         marginBottom: '5rem',
     },
     title: {
-        fontSize: '6rem',
+        top: '-1.875rem',
+        fontSize: '5rem',
         fontWeight: 'bold',
-        fontStyle: 'italic',
-        marginBottom: '2.5rem',
+        marginLeft: '1rem',
+        position: 'relative',
+        fontFamily: 'Rock Salt',
     },
 });
 
@@ -31,8 +33,10 @@ const Header = () => {
 
     return (
         <div className={classes.container}>
-            <Fade top>
+            <Fade left>
                 <Logo />
+            </Fade>
+            <Fade right>
                 <span className={classes.title}>{copy.title}</span>
             </Fade>
             <Fade bottom>

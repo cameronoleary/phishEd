@@ -11,6 +11,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 // Internal
 import copy from '../../copy';
 import { ROUTES } from '../../constants';
+import ContentBlock from './Content/ContentBlock';
 
 const useStyles = makeStyles({
     container: {
@@ -19,7 +20,6 @@ const useStyles = makeStyles({
         justifyContent: 'center',
     },
     paragraph: {
-        color: 'white',
         fontSize: '1.125rem',
         marginBottom: '1rem',
         lineHeight: '1.875rem',
@@ -31,16 +31,24 @@ const Footer = () => {
 
     return (
         <Fade bottom>
-            <div className={classes.container}>
-                <span className={classes.paragraph}>
-                    {copy.landingPage.footer.paragraph}
-                </span>
-                <Link className={classes.button} to={ROUTES.QUIZ}>
-                    <Button variant='contained' endIcon={<NavigateNextIcon />}>
-                        {copy.landingPage.footer.buttonLabel}
-                    </Button>
-                </Link>
-            </div>
+            <ContentBlock>
+                <div className={classes.container}>
+                    <span className={classes.paragraph}>
+                        {copy.landingPage.footer.paragraph}
+                    </span>
+                    <Link to={ROUTES.QUIZ}>
+                        <Button
+                            sx={{
+                                backgroundColor: '#f26721',
+                            }}
+                            variant='contained'
+                            endIcon={<NavigateNextIcon />}
+                        >
+                            {copy.landingPage.footer.buttonLabel}
+                        </Button>
+                    </Link>
+                </div>
+            </ContentBlock>
         </Fade>
     );
 };

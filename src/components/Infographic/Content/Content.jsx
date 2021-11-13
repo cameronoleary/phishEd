@@ -4,10 +4,10 @@ import Fade from 'react-reveal/Fade';
 import { makeStyles } from '@material-ui/styles';
 
 // Internal
+import Stages from '../Stages';
 import copy from '../../../copy';
+import CommonTypes from '../CommonTypes';
 import ContentBlock from './ContentBlock';
-import ContentBlockImage from './ContentBlockImage';
-import StagesInAPhishingAttack from '../../../images/stages.png';
 
 const useStyles = makeStyles({
     factsContainer: {
@@ -27,24 +27,16 @@ const Content = () => {
 
     const copyPrefix = copy.landingPage.content;
 
-    const stagesInAPhishingAttack = {
-        ...copyPrefix.stagesInAPhishingAttack,
-        image: {
-            ...copyPrefix.stagesInAPhishingAttack.image,
-            src: StagesInAPhishingAttack,
-        },
-    };
-
     return (
         <div>
-            <Fade left>
+            <Fade bottom>
                 <ContentBlock {...copyPrefix.whatIsPhishing} />
             </Fade>
-            <Fade right>
-                <ContentBlockImage {...stagesInAPhishingAttack} />
+            <Fade bottom>
+                <Stages />
             </Fade>
-            <Fade left>
-                <ContentBlock {...copyPrefix.commonTypesOfPhishing} />
+            <Fade bottom>
+                <CommonTypes />
             </Fade>
             <div className={classes.factsContainer}>
                 {copyPrefix.facts.map((fact, idx) => {
@@ -71,7 +63,7 @@ const Content = () => {
                     );
                 })}
             </div>
-            <Fade right>
+            <Fade bottom>
                 <ContentBlock {...copyPrefix.howToPreventPhishingAttacks} />
             </Fade>
         </div>

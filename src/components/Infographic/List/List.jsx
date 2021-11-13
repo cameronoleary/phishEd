@@ -10,7 +10,7 @@ const useStyles = makeStyles({
         marginBottom: '1rem',
     },
     list: {
-        color: 'white',
+        color: 'black',
         textAlign: 'left',
         fontSize: '1.125rem',
         lineHeight: '1.875rem',
