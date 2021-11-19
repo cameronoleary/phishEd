@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // Internal
 import { ROUTES } from './constants';
 import Quiz from './components/Quiz/Quiz';
+import Preface from './components/Quiz/Preface';
 import LandingPage from './components/LandingPage';
 
 const useStyles = makeStyles({
@@ -42,6 +43,7 @@ const App = () => {
                         path={ROUTES.LANDING_PAGE}
                         component={LandingPage}
                     />
+                    <Route path={ROUTES.PREFACE} component={Preface} />
                     <Route path={ROUTES.QUIZ} component={Quiz} />
                 </Switch>
             </Router>

@@ -1,13 +1,20 @@
-import React, { useEffect } from 'react';
-import Fade from 'react-reveal/Fade';
+// External
+import React from 'react';
+import { makeStyles } from '@material-ui/styles';
 
-const Email = ({ email }) => {
-    useEffect(() => [email]);
+const useStyles = makeStyles({
+    container: {
+        width: '100%',
+    },
+});
+
+const Email = ({ src }) => {
+    const classes = useStyles();
 
     return (
-        <Fade top>
-            <img alt='email' src={email} />
-        </Fade>
+        <div className={classes.container}>
+            <img alt='email' src={src} />
+        </div>
     );
 };
 

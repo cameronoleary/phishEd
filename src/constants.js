@@ -1,5 +1,8 @@
+export const PRIMARY_COLOR = '#F26721';
+
 export const ROUTES = {
     LANDING_PAGE: '/',
+    PREFACE: '/preface',
     QUIZ: '/quiz',
 };
 

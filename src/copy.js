@@ -1,5 +1,10 @@
 export default {
     title: 'phishEd',
+    nav: {
+        home: 'Home',
+        back: 'Back',
+        next: 'Next',
+    },
     landingPage: {
         header: {
             about: 'Welcome to phishEd (Phishing Education) - a quick and easy way to learn about phishing. You will learn about what phishing is, the stages of a phishing attack, the common types of phishing, and how to prevent phishing attacks. Remember to test your understanding by taking the short quiz at the bottom of this page!',
@@ -238,6 +243,35 @@ export default {
                 'As you may have learned, emails are one of the most common sources of a phishing attack. It can sometimes be difficult to distinguish phishing emails from legitimate ones. Try your hand at identifying phishing emails by taking our quiz!',
             buttonLabel: 'Take Quiz',
         },
+    },
+    preface: {
+        text: 'Before you begin, here are some things to watch out for when trying to identify a phishing email:',
+        list: {
+            items: [
+                {
+                    name: "Sender's email domain is suspicious (e.g., public email domain such as gmail)",
+                },
+                {
+                    name: 'Misspelling within body of email (i.e., poorly written)',
+                },
+                {
+                    name: 'Suspicious attachments',
+                },
+                {
+                    name: 'External links',
+                },
+                {
+                    name: 'Uses logo and signature from a trusted company',
+                },
+                {
+                    name: 'Generic greeting (e.g., Hello, Dear user, etc.)',
+                },
+                {
+                    name: 'Email expresses a sense of urgency',
+                },
+            ],
+        },
+        buttonLabel: 'Begin',
     },
     quiz: {
         buttons: {

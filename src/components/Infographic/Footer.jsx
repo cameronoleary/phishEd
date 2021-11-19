@@ -2,14 +2,11 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
 import { makeStyles } from '@material-ui/styles';
-
-// Assets
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 // Internal
 import copy from '../../copy';
+import Button from '../Button';
 import { ROUTES } from '../../constants';
 import ContentBlock from './Content/ContentBlock';
 
@@ -29,23 +26,17 @@ const useStyles = makeStyles({
 const Footer = () => {
     const classes = useStyles();
 
+    const { footer } = copy.landingPage;
+
     return (
         <Fade bottom>
             <ContentBlock>
                 <div className={classes.container}>
                     <span className={classes.paragraph}>
-                        {copy.landingPage.footer.paragraph}
+                        {footer.paragraph}
                     </span>
-                    <Link to={ROUTES.QUIZ}>
-                        <Button
-                            sx={{
-                                backgroundColor: '#f26721',
-                            }}
-                            variant='contained'
-                            endIcon={<NavigateNextIcon />}
-                        >
-                            {copy.landingPage.footer.buttonLabel}
-                        </Button>
+                    <Link to={ROUTES.PREFACE}>
+                        <Button label={footer.buttonLabel} />
                     </Link>
                 </div>
             </ContentBlock>

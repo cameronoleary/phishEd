@@ -1,7 +1,8 @@
-import { PHISHING_IMAGES, LEGITIMATE_IMAGES } from "./img";
-import { IMAGE_COUNTS, IMAGE_PICK_LIMITS } from "../constants";
+import { PHISHING_IMAGES, LEGITIMATE_IMAGES } from './img';
+import { IMAGE_COUNTS, IMAGE_PICK_LIMITS } from '../constants';
 
-const getRandomIndex = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const getRandomIndex = (min, max) =>
+    Math.floor(Math.random() * (max - min)) + min;
 
 // Durstenfeld shuffle.
 // https://stackoverflow.com/a/12646864
@@ -16,7 +17,7 @@ const shuffle = (arr) => {
     return newArr;
 };
 
-export const getImages = () => {
+export const getEmails = () => {
     const { PHISH_IMAGE_COUNT, LEGIT_IMAGE_COUNT } = IMAGE_COUNTS;
     const { PHISH_PICK_LIMIT, LEGIT_PICK_LIMIT } = IMAGE_PICK_LIMITS;
 
@@ -36,10 +37,10 @@ export const getImages = () => {
     // Pick LEGIT_PICK_LIMIT number of legitimate images and add them to the images array.
     for (let i = 0; i < LEGIT_PICK_LIMIT; i++) {
         const randIndex = getRandomIndex(0, LEGIT_IMAGE_COUNT - i);
-        
+
         images.push(temp[randIndex]);
         temp.splice(randIndex, 1);
     }
 
     return shuffle(images);
-}
+};
