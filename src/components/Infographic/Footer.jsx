@@ -7,8 +7,11 @@ import { makeStyles } from '@material-ui/styles';
 // Internal
 import copy from '../../copy';
 import Button from '../Button';
-import { ROUTES } from '../../constants';
+import { ROUTES, PRIMARY_COLOR } from '../../constants';
 import ContentBlock from './Content/ContentBlock';
+
+// Assets
+import QuizIcon from '@mui/icons-material/Quiz';
 
 const useStyles = makeStyles({
     container: {
@@ -30,7 +33,7 @@ const Footer = () => {
 
     return (
         <Fade bottom>
-            <ContentBlock>
+            <ContentBlock icon={<QuizIcon fontSize='large' />}>
                 <div className={classes.container}>
                     <span className={classes.paragraph}>
                         {footer.paragraph}

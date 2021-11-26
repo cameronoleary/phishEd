@@ -14,7 +14,7 @@ import LandingPage from './components/LandingPage';
 const useStyles = makeStyles({
     wave: {
         zIndex: '-1',
-        height: '27.5rem',
+        height: '33.5rem',
         position: 'absolute',
         transform: 'rotate(180deg)',
     },

@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/styles';
 
 // Assets
 import HomeIcon from '@mui/icons-material/Home';
+import ReplayIcon from '@mui/icons-material/Replay';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
@@ -31,18 +32,24 @@ const useStyles = makeStyles({
         },
     },
     buttonContainer: {
-        width: '100%',
         display: 'flex',
-        flexWrap: 'wrap',
         marginTop: '1rem',
         justifyContent: 'center',
     },
     container: {
         display: 'flex',
         flexWrap: 'wrap',
+        padding: '2.5rem',
         textAlign: 'center',
-        flexDirection: 'column',
         alignContent: 'center',
+        flexDirection: 'column',
+    },
+    footerContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    header: {
+        color: 'black',
     },
     paragraph: {
         width: '100%',
@@ -55,14 +62,14 @@ const CHOICES = {
 };
 
 const Quiz = () => {
-    const { labels } = copy.quiz.buttons;
+    const { completed, buttons } = copy.quiz;
 
     const [next, setNext] = useState(0);
     const [score, setScore] = useState(0);
     const [emails, setEmails] = useState([]);
     const [showNext, setShowNext] = useState(false);
     const [finished, setFinished] = useState(false);
-    const [nextButtonLabel, setNextButtonLabel] = useState(labels.next);
+    const [nextButtonLabel, setNextButtonLabel] = useState(buttons.labels.next);
 
     const classes = useStyles();
 
@@ -81,17 +88,14 @@ const Quiz = () => {
 
         setShowNext(true);
 
-        if (next === emails.length - 1) {
-            setNextButtonLabel(labels.finishQuiz);
-            return;
-        }
+        if (next === emails.length - 1) handleNext();
     };
 
     const handleNext = () => {
         // User has finished the quiz. Display the score.
         if (next === emails.length - 1) {
             setFinished(true);
-            console.log(`Your score is ${score}/${emails.length}`);
+            console.log(`You got ${score}/${emails.length} correct.`);
             return;
         }
 
@@ -103,12 +107,18 @@ const Quiz = () => {
         <div className={classes.container}>
             {finished && (
                 <ContentBlock
-                    text={`Your score is ${score}/${emails.length}`}
+                    header={`You got ${score}/${emails.length} correct.`}
+                    text={completed.text}
+                    className={{ header: classes.header }}
                 />
             )}
             {!finished && (
                 <Fade top>
-                    <ContentBlock text={emails[next].description}>
+                    <ContentBlock
+                        header={emails[next].name}
+                        text={emails[next].description}
+                        className={{ header: classes.header }}
+                    >
                         <div className={classes.buttonContainer}>
                             {showNext ? (
                                 <Button
@@ -120,14 +130,14 @@ const Quiz = () => {
                                 <Stack spacing={2} direction='row'>
                                     <Button
                                         startIcon={<WarningIcon />}
-                                        label={labels.phishing}
+                                        label={buttons.labels.phishing}
                                         onClick={() =>
                                             handleChoice(CHOICES.PHISHING)
                                         }
                                     />
                                     <Button
                                         endIcon={<MarkEmailReadIcon />}
-                                        label={labels.legitimate}
+                                        label={buttons.labels.legitimate}
                                         onClick={() =>
                                             handleChoice(CHOICES.LEGITIMATE)
                                         }
@@ -140,9 +150,21 @@ const Quiz = () => {
                 </Fade>
             )}
             <Fade bottom>
-                <Link to={ROUTES.LANDING_PAGE}>
-                    <Button startIcon={<HomeIcon />} label='Home' />
-                </Link>
+                <div className={classes.footerContainer}>
+                    <Stack spacing={2} direction='row'>
+                        <Link to={ROUTES.LANDING_PAGE}>
+                            <Button startIcon={<HomeIcon />} label='Home' />
+                        </Link>
+                        {finished && (
+                            <Link to={ROUTES.PREFACE}>
+                                <Button
+                                    endIcon={<ReplayIcon />}
+                                    label='Try Again'
+                                />
+                            </Link>
+                        )}
+                    </Stack>
+                </div>
             </Fade>
         </div>
     );

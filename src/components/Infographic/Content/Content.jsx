@@ -8,8 +8,17 @@ import Stages from '../Stages';
 import copy from '../../../copy';
 import CommonTypes from '../CommonTypes';
 import ContentBlock from './ContentBlock';
+import { PRIMARY_COLOR } from '../../../constants';
+
+// Assets
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 const useStyles = makeStyles({
+    card: {
+        minHeight: '15.5rem',
+    },
     factsContainer: {
         display: 'flex',
     },
@@ -26,6 +35,12 @@ const Content = () => {
     const classes = useStyles();
 
     const copyPrefix = copy.landingPage.content;
+
+    const icons = [
+        <LockOpenIcon fontSize='large' />,
+        <TrendingUpIcon fontSize='large' />,
+        <AttachMoneyIcon fontSize='large' />,
+    ];
 
     return (
         <div>
@@ -46,7 +61,11 @@ const Content = () => {
                         return (
                             <Fade top>
                                 <div key={idx} className={classes.fact}>
-                                    <ContentBlock {...fact} />
+                                    <ContentBlock
+                                        icon={icons[idx]}
+                                        className={{ card: classes.card }}
+                                        {...fact}
+                                    />
                                 </div>
                             </Fade>
                         );
@@ -57,7 +76,11 @@ const Content = () => {
                     return (
                         <Fade bottom>
                             <div key={idx} className={classes.fact}>
-                                <ContentBlock {...fact} />
+                                <ContentBlock
+                                    icon={icons[idx]}
+                                    className={{ card: classes.card }}
+                                    {...fact}
+                                />
                             </div>
                         </Fade>
                     );

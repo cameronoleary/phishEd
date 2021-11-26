@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 
 // Internal
 import Sources from '../Sources';
+import { PRIMARY_COLOR } from '../../../constants';
 
 const useStyles = makeStyles({
     container: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles({
         lineHeight: '1.875rem',
     },
     name: {
-        color: 'black',
+        color: PRIMARY_COLOR,
         fontWeight: 'bold',
     },
 });

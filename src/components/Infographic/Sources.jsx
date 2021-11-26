@@ -2,6 +2,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 
+// Internal
+import copy from '../../copy';
+
 // Assets
 import LaunchIcon from '@mui/icons-material/Launch';
 
@@ -10,16 +13,18 @@ const useStyles = makeStyles({
         margin: 0,
     },
     container: {
-        color: 'black',
+        marginTop: '1rem',
+        fontSize: '1.125rem',
     },
     icon: {
         top: '.375rem',
         position: 'relative',
     },
     link: {
-        color: '#f26721',
+        color: 'grey',
         fontWeight: 'bold',
         fontSize: '1.125rem',
+        display: 'inline-block',
     },
     list: {
         margin: 0,
@@ -42,18 +47,31 @@ const useStyles = makeStyles({
 const Sources = ({ sources }) => {
     const classes = useStyles();
 
+    let sourcePrefix = '';
+
+    if (sources.sourcePrefix) {
+        sourcePrefix = sources.sourcePrefix;
+    } else if (sources.sourceContent.length > 1) {
+        sourcePrefix = `${copy.common.sources}: `;
+    } else {
+        sourcePrefix = `${copy.common.source}: `;
+    }
+
     return (
         <div className={classes.container}>
+            <span>{sourcePrefix}</span>
             <ul className={classes.list}>
-                {sources.map((source, idx) => (
+                {sources.sourceContent.map((source, idx) => (
                     <li key={idx}>
                         <a
                             target='_blank'
                             href={source.link}
                             className={classes.link}
                         >
-                            {source.name}
-                            <LaunchIcon className={classes.icon} />
+                            <div>
+                                {source.name}
+                                <LaunchIcon className={classes.icon} />
+                            </div>
                         </a>
                     </li>
                 ))}

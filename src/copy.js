@@ -1,5 +1,9 @@
 export default {
     title: 'phishEd',
+    common: {
+        source: 'Source',
+        sources: 'Sources',
+    },
     nav: {
         home: 'Home',
         back: 'Back',
@@ -39,12 +43,15 @@ export default {
                         text: 'Your money is taken by fraud.',
                     },
                 ],
-                sources: [
-                    {
-                        name: 'Analysis of Phishing Attacks and Countermeasures on ResearchGate',
-                        link: 'https://www.researchgate.net/figure/Stages-in-a-Phishing-attack_fig1_235947501',
-                    },
-                ],
+                sources: {
+                    sourcePrefix: 'For more information, visit',
+                    sourceContent: [
+                        {
+                            name: 'Analysis of Phishing Attacks and Countermeasures on ResearchGate',
+                            link: 'https://www.researchgate.net/figure/Stages-in-a-Phishing-attack_fig1_235947501',
+                        },
+                    ],
+                },
             },
             commonTypesOfPhishing: {
                 header: 'Common Types of Phishing',
@@ -56,56 +63,66 @@ export default {
                             name: 'Email phishing',
                             description:
                                 'a generic email that contains a link to a malicious website or a file attachment that installs malware onto your computer in an attempt to obtain your personal information.',
-                            sources: [
-                                {
-                                    name: 'SecurityScorecard',
-                                    link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'SecurityScorecard',
+                                        link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Spear phishing',
                             description:
                                 'a type of email phishing that targets you by researching specific information about you or the organization you work for.',
-                            sources: [
-                                {
-                                    name: 'SecurityScorecard',
-                                    link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'SecurityScorecard',
+                                        link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Whaling',
                             description:
                                 'a type of spear phishing impersonating the CEO of the organization you work for.',
-                            sources: [
-                                {
-                                    name: 'Rapid7',
-                                    link: 'https://www.rapid7.com/fundamentals/whaling-phishing-attacks/',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'Rapid7',
+                                        link: 'https://www.rapid7.com/fundamentals/whaling-phishing-attacks/',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Clone phishing',
                             description:
                                 'an email with near-identical characteristics of a legitimate email you had previously received with the links or attachments replaced with malicious ones.',
-                            sources: [
-                                {
-                                    name: 'Cofense',
-                                    link: 'https://cofense.com/project/phishing-vs-spear-phishing/',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'Cofense',
+                                        link: 'https://cofense.com/project/phishing-vs-spear-phishing/',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Vishing (voice phishing)',
                             description:
                                 'a phone call from an individual pretending to be from a well-known organization such as your government or bank institution in an attempt to steal your personal information.',
-                            sources: [
-                                {
-                                    name: 'Terranova Security',
-                                    link: 'https://terranovasecurity.com/what-is-vishing/',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'Terranova Security',
+                                        link: 'https://terranovasecurity.com/what-is-vishing/',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Smishing (SMS phishing)',
@@ -116,71 +133,83 @@ export default {
                             name: 'Angler phishing',
                             description:
                                 'a customer service account on social media hoping to attract your attention and subsequently steal your personal information.',
-                            sources: [
-                                {
-                                    name: 'The CyberWire',
-                                    link: 'https://thecyberwire.com/glossary/angler-phishing',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'The CyberWire',
+                                        link: 'https://thecyberwire.com/glossary/angler-phishing',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'HTTPS phishing',
                             description:
                                 'a link posing to be safe to click. HTTPS is used by most modern websites to encrypt information sent between you and it. This type of phishing attack increases the difficulty in verifying the authenticity of a malicious website.',
-                            sources: [
-                                {
-                                    name: 'PhishLabs',
-                                    link: 'https://www.phishlabs.com/blog/more-than-half-of-phishing-sites-use-https/',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'PhishLabs',
+                                        link: 'https://www.phishlabs.com/blog/more-than-half-of-phishing-sites-use-https/',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Pop-up phishing',
                             description:
                                 'placement of malicious code within pop-up notification boxes on a website.',
-                            sources: [
-                                {
-                                    name: 'SecurityScorecard',
-                                    link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'SecurityScorecard',
+                                        link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Watering hole phishing',
                             description:
                                 'frequently used websites within your organization that become compromised and download malware onto your device once visited.',
-                            sources: [
-                                {
-                                    name: 'NCSC',
-                                    link: 'https://www.ncsc.gov.uk/collection/supply-chain-security/watering-hole-attacks',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'NCSC',
+                                        link: 'https://www.ncsc.gov.uk/collection/supply-chain-security/watering-hole-attacks',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Pharming',
                             description:
                                 'installation of malicious code on your computer or a server that redirects you to fradulent websites without your knowledge or consent. This type of phishing attack is technical and difficult to detect.',
-                            sources: [
-                                {
-                                    name: 'SearchSecurity',
-                                    link: 'https://searchsecurity.techtarget.com/definition/pharming',
-                                },
-                                {
-                                    name: 'SecurityScorecard',
-                                    link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'SearchSecurity',
+                                        link: 'https://searchsecurity.techtarget.com/definition/pharming',
+                                    },
+                                    {
+                                        name: 'SecurityScorecard',
+                                        link: 'https://securityscorecard.com/blog/types-of-phishing-attacks-and-how-to-identify-them',
+                                    },
+                                ],
+                            },
                         },
                         {
                             name: 'Evil twin',
                             description:
                                 'a fraudulent and insecure form of WiFi that is used to observe your online searches and can be used to steal your passwords.',
-                            sources: [
-                                {
-                                    name: 'Okta',
-                                    link: 'https://www.okta.com/identity-101/evil-twin-attack/',
-                                },
-                            ],
+                            sources: {
+                                sourceContent: [
+                                    {
+                                        name: 'Okta',
+                                        link: 'https://www.okta.com/identity-101/evil-twin-attack/',
+                                    },
+                                ],
+                            },
                         },
                     ],
                 },
@@ -189,37 +218,43 @@ export default {
                 {
                     header: '90%',
                     text: 'of data breaches are caused by phishing attacks.',
-                    sources: [
-                        {
-                            name: 'Cisco Umbrella',
-                            link: 'https://umbrella.cisco.com/info/2021-cyber-security-threat-trends-phishing-crypto-top-the-list?utm_medium=search-paid&utm_source=google&utm_campaign=UMB_22Q1_NA_EN_GS_Nonbrand_Threats&utm_term=pgm&utm_content=UMB-FY21-Q4-content-ebook-2021-cyber-security-threat-trends&_bt=531409955716&_bk=phishing&_bm=p&_bn=g&_bg=122023014712&gclid=Cj0KCQjwg7KJBhDyARIsAHrAXaGjI6x5DDM54ayYaSHTVBqjk8eEg2Q4Wp-7ZyVZXEPHI1L8DPp-FxIaAifAEALw_wcB',
-                        },
-                    ],
+                    sources: {
+                        sourceContent: [
+                            {
+                                name: 'Cisco Umbrella',
+                                link: 'https://umbrella.cisco.com/info/2021-cyber-security-threat-trends-phishing-crypto-top-the-list?utm_medium=search-paid&utm_source=google&utm_campaign=UMB_22Q1_NA_EN_GS_Nonbrand_Threats&utm_term=pgm&utm_content=UMB-FY21-Q4-content-ebook-2021-cyber-security-threat-trends&_bt=531409955716&_bk=phishing&_bm=p&_bn=g&_bg=122023014712&gclid=Cj0KCQjwg7KJBhDyARIsAHrAXaGjI6x5DDM54ayYaSHTVBqjk8eEg2Q4Wp-7ZyVZXEPHI1L8DPp-FxIaAifAEALw_wcB',
+                            },
+                        ],
+                    },
                 },
                 {
                     header: '667%',
                     text: 'increase in spear phishing attacks since the end of February 2021.',
-                    sources: [
-                        {
-                            name: 'Barracuda Networks',
-                            link: 'https://blog.barracuda.com/2020/03/26/threat-spotlight-coronavirus-related-phishing/',
-                        },
-                    ],
+                    sources: {
+                        sourceContent: [
+                            {
+                                name: 'Barracuda Networks',
+                                link: 'https://blog.barracuda.com/2020/03/26/threat-spotlight-coronavirus-related-phishing/',
+                            },
+                        ],
+                    },
                 },
                 {
                     header: '$17,700',
                     text: 'per minute lost by businesses due to phishing attacks.',
-                    sources: [
-                        {
-                            name: 'RiskIQ',
-                            link: 'https://www.riskiq.com/resources/infographic/evil-internet-minute-2019/',
-                        },
-                    ],
+                    sources: {
+                        sourceContent: [
+                            {
+                                name: 'RiskIQ',
+                                link: 'https://www.riskiq.com/resources/infographic/evil-internet-minute-2019/',
+                            },
+                        ],
+                    },
                 },
             ],
             howToPreventPhishingAttacks: {
                 header: 'How to Prevent Phishing Attacks',
-                text: 'It is important to learn how to prevent phishing attacks in order to ensure data confidentiality. The Canadian Centre for Cyber Security (CCCS) identifies several ways to protect yourself from becoming a victim of a phishing attack:',
+                text: 'It is important to be aware of how you can keep your data safe from phishing attacks. The Canadian Centre for Cyber Security (CCCS) identifies several ways to protect yourself from becoming a victim of a phishing attack:',
                 list: {
                     items: [
                         { name: 'Filter spam emails' },
@@ -233,6 +268,15 @@ export default {
                         },
                         {
                             name: 'Use anti-phishing software that aligns with the Domain-based Message, Authentication, and Conformance (DMARC) policy',
+                        },
+                    ],
+                },
+                sources: {
+                    sourcePrefix: 'For more information, visit',
+                    sourceContent: [
+                        {
+                            name: "Don't Take the Bait: Recognize and Avoid Phishing Attacks on Canadian Centre for Cyber Security",
+                            link: 'https://cyber.gc.ca/en/guidance/dont-take-bait-recognize-and-avoid-phishing-attacks',
                         },
                     ],
                 },
@@ -274,6 +318,9 @@ export default {
         buttonLabel: 'Begin',
     },
     quiz: {
+        completed: {
+            text: 'Thanks for taking our quiz!',
+        },
         buttons: {
             labels: {
                 next: 'Next',

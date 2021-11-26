@@ -8,6 +8,7 @@ import { PRIMARY_COLOR } from '../constants';
 const Button = ({ startIcon, endIcon, label, onClick }) => (
     <MaterialButton
         sx={{
+            fontWeight: 'bold',
             backgroundColor: PRIMARY_COLOR,
         }}
         variant='contained'

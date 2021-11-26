@@ -4,10 +4,14 @@ import Fade from 'react-reveal/Fade';
 import { makeStyles } from '@material-ui/styles';
 
 // Internal
-import copy from '../../copy';
 import Logo from '../Logo';
+import copy from '../../copy';
+import ContentBlock from './Content/ContentBlock';
 
 const useStyles = makeStyles({
+    card: {
+        margin: '0 0 8rem',
+    },
     container: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -40,9 +44,10 @@ const Header = () => {
                 <span className={classes.title}>{copy.title}</span>
             </Fade>
             <Fade bottom>
-                <span className={classes.paragraph}>
-                    {copy.landingPage.header.about}
-                </span>
+                <ContentBlock
+                    text={copy.landingPage.header.about}
+                    className={{ card: classes.card }}
+                />
             </Fade>
         </div>
     );

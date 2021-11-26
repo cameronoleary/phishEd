@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 // Internal
 import copy from '../../copy';
+import { PRIMARY_COLOR } from '../../constants';
 import ContentBlock from './Content/ContentBlock';
 
 // Assets

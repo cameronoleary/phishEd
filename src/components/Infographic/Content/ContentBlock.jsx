@@ -1,5 +1,6 @@
 // External
 import React from 'react';
+import clsx from 'clsx';
 import Card from '@mui/material/Card';
 import { makeStyles } from '@material-ui/styles';
 import CardContent from '@mui/material/CardContent';
@@ -11,8 +12,6 @@ import Sources from '../Sources';
 const useStyles = makeStyles({
     container: {
         padding: '1rem',
-        boxShadow: '5px 10px',
-        borderRadius: '.313rem',
         margin: '1.875rem 0 2.5rem',
     },
     header: {
@@ -31,19 +30,31 @@ const useStyles = makeStyles({
     },
 });
 
-const ContentBlock = ({ children, icon, header, text, list, sources }) => {
+const ContentBlock = ({
+    children = null,
+    className = {},
+    icon = null,
+    header = null,
+    text = null,
+    list = null,
+    sources = null,
+}) => {
     const classes = useStyles();
 
     return (
         <div>
-            {header && <span className={classes.header}>{header}</span>}
+            {header && (
+                <span className={clsx(className.header, classes.header)}>
+                    {header}
+                </span>
+            )}
             <Card
                 sx={{
                     maxWidth: '50rem',
                     borderRadius: '.938rem',
                     backgroundColor: '#FFFFFF',
                 }}
-                className={classes.container}
+                className={clsx(className.card, classes.container)}
             >
                 <CardContent>
                     {icon && <div>{icon}</div>}
