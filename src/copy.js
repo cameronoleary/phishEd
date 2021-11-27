@@ -11,42 +11,42 @@ export default {
     },
     landingPage: {
         header: {
-            about: 'Welcome to phishEd (Phishing Education) - a quick and easy way to learn about phishing. You will learn about what phishing is, the stages of a phishing attack, the common types of phishing, and how to prevent phishing attacks. Remember to test your understanding by taking the short quiz at the bottom of this page!',
+            about: 'Welcome to <b style="color: #F26721">phishEd</b> (Phishing Education) - a quick and easy way to learn about phishing. You will learn about <b style="color: #F26721">what phishing is</b>, the <b style="color: #F26721">stages of a phishing attack</b>, the <b style="color: #F26721">common types of phishing</b>, and <b style="color: #F26721">how to prevent phishing attacks</b>. Remember to test your understanding by taking the short quiz at the bottom of this page!',
         },
         content: {
             whatIsPhishing: {
                 header: 'What Is Phishing?',
-                text: 'Phishing is an attack carried out by criminals using deceptive tricks to gain your trust or the trust of an organization with the intent to steal sensitive information. For example, a criminal may target you by pretending to be the representative of your banking institution in an attempt to obtain your credit card information or social insurance number.',
+                text: 'Phishing is an <b style="color: #F26721">attack</b> carried out by criminals using deceptive tricks to gain your trust or the trust of an organization with the intent to <b style="color: #F26721">steal sensitive information</b>. For example, a criminal may target you by pretending to be the representative of your banking institution in an attempt to obtain your credit card information or social insurance number.',
             },
             stagesInAPhishingAttack: {
                 header: 'Stages in a Phishing Attack',
                 stages: [
                     {
-                        text: 'An attacker sends you a forged email that looks like an email sent by your bank.',
+                        text: 'An attacker sends you a <b style="color: #F26721">forged email</b> that looks like an email sent by your bank.',
                     },
                     {
-                        text: 'The email states that your bank account password has been compromised and contains a link to update your password.',
+                        text: 'The email states that your bank account password has been compromised and <b style="color: #F26721">contains a link</b> to update your password.',
                     },
                     {
-                        text: "You the click the link and are brought to a fradulent website on the attacker's web server that looks like your bank's website.",
+                        text: "You the click the link and are brought to a <b style='color: #F26721'>fradulent website</b> on the attacker's web server that looks like your bank's website.",
                     },
                     {
-                        text: 'The seemingly legitimate website asks you to log in with your credit card details and password.',
+                        text: 'The seemingly legitimate website asks you to log in with your <b style="color: #F26721">credit card details and password</b>.',
                     },
                     {
-                        text: 'You log in with your credit card details and password.',
+                        text: '<b style="color: #F26721">You log in</b> with your credit card details and password.',
                     },
                     {
-                        text: 'Your information is transmitted to the attacker.',
+                        text: 'Your information is <b style="color: #F26721">transmitted to the attacker</b>.',
                     },
                     {
-                        text: 'The attacker uses your credit card details and password to log into your bank account.',
+                        text: 'The <b style="color: #F26721">attacker uses your credit card details and password</b> to log in to your bank account.',
                     },
                     {
-                        text: 'The attacker sends themself money from your account via e-transfer.',
+                        text: 'The attacker <b style="color: #F26721">sends themself money</b> from your account via e-transfer.',
                     },
                     {
-                        text: 'Your money is taken by fraud.',
+                        text: 'Your money is taken by <b style="color: #F26721">fraud</b>.',
                     },
                 ],
                 sources: {
@@ -223,7 +223,7 @@ export default {
             facts: [
                 {
                     header: '90%',
-                    text: 'of data breaches are caused by phishing attacks.',
+                    text: 'of <b style="color: #F26721">data breaches</b> are caused by phishing attacks.',
                     sources: {
                         sourceContent: [
                             {
@@ -235,7 +235,7 @@ export default {
                 },
                 {
                     header: '667%',
-                    text: 'increase in spear phishing attacks since the end of February 2021.',
+                    text: 'increase in <b style="color: #F26721">spear phishing attacks</b> since the end of February 2021.',
                     sources: {
                         sourceContent: [
                             {
@@ -247,7 +247,7 @@ export default {
                 },
                 {
                     header: '$17,700',
-                    text: 'per minute lost by businesses due to phishing attacks.',
+                    text: 'per minute <b style="color: #F26721">lost by businesses</b> due to phishing attacks.',
                     sources: {
                         sourceContent: [
                             {
@@ -263,17 +263,23 @@ export default {
                 text: 'It is important to be aware of how you can keep your data safe from phishing attacks. The Canadian Centre for Cyber Security (CCCS) identifies several ways to protect yourself from becoming a victim of a phishing attack:',
                 list: {
                     items: [
-                        { name: 'Filter spam emails' },
-                        { name: 'Verify links before clicking them' },
-                        { name: 'Do not open suspicious attachments' },
                         {
-                            name: 'Keep up-to-date with software updates and security patches',
+                            name: '<b style="color: #F26721">Filter</b> spam emails',
                         },
                         {
-                            name: 'Avoid sending sensitive information (e.g., passwords) over email or text',
+                            name: '<b style="color: #F26721">Verify links</b> before clicking them',
                         },
                         {
-                            name: 'Use anti-phishing software that aligns with the Domain-based Message, Authentication, and Conformance (DMARC) policy',
+                            name: 'Do not open <b style="color: #F26721">suspicious attachments</b>',
+                        },
+                        {
+                            name: 'Keep up-to-date with <b style="color: #F26721">software updates</b> and <b style="color: #F26721">security patches</b>',
+                        },
+                        {
+                            name: 'Avoid sending <b style="color: #F26721">sensitive information</b> (e.g., passwords) over email or text',
+                        },
+                        {
+                            name: 'Use <b style="color: #F26721">anti-phishing software</b> that aligns with the Domain-based Message, Authentication, and Conformance (DMARC) policy',
                         },
                     ],
                 },
@@ -299,25 +305,25 @@ export default {
         list: {
             items: [
                 {
-                    name: "Sender's email domain is suspicious (e.g., public email domain such as gmail)",
+                    name: "Sender's <b style='color: #F26721'>email domain</b> is suspicious (e.g., public email domain such as gmail)",
                 },
                 {
-                    name: 'Misspelling within body of email (i.e., poorly written)',
+                    name: '<b style="color: #F26721">Misspelling</b> within body of email',
                 },
                 {
-                    name: 'Suspicious attachments',
+                    name: 'Suspicious <b style="color: #F26721">attachments</b>',
                 },
                 {
-                    name: 'External links',
+                    name: 'External <b style="color: #F26721">links</b>',
                 },
                 {
-                    name: 'Uses logo and signature from a trusted company',
+                    name: 'Uses <b style="color: #F26721">logo</b> and <b style="color: #F26721">signature</b> from a trusted company',
                 },
                 {
-                    name: 'Generic greeting (e.g., Hello, Dear user, etc.)',
+                    name: 'Has a <b style="color: #F26721">generic greeting</b> (e.g., Hello, Dear user, etc.)',
                 },
                 {
-                    name: 'Email expresses a sense of urgency',
+                    name: 'Email expresses a <b style="color: #F26721">sense of urgency</b>',
                 },
             ],
         },

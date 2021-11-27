@@ -1,5 +1,6 @@
 // External
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 import { makeStyles } from '@material-ui/styles';
 
 // Internal
@@ -28,7 +29,7 @@ const ListItem = ({ name, description, sources }) => {
             {sources && <Sources sources={sources} />}
         </div>
     ) : (
-        name
+        ReactHtmlParser(name)
     );
 };
 

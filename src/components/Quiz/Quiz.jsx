@@ -8,7 +8,6 @@ import { makeStyles } from '@material-ui/styles';
 // Assets
 import HomeIcon from '@mui/icons-material/Home';
 import ReplayIcon from '@mui/icons-material/Replay';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
@@ -67,7 +66,6 @@ const Quiz = () => {
     const [next, setNext] = useState(0);
     const [score, setScore] = useState(0);
     const [emails, setEmails] = useState([]);
-    const [showNext, setShowNext] = useState(false);
     const [finished, setFinished] = useState(false);
     const [nextButtonLabel, setNextButtonLabel] = useState(buttons.labels.next);
 
@@ -86,9 +84,7 @@ const Quiz = () => {
 
         if (correctChoice) setScore(score + 1);
 
-        setShowNext(true);
-
-        if (next === emails.length - 1) handleNext();
+        handleNext();
     };
 
     const handleNext = () => {
@@ -100,7 +96,6 @@ const Quiz = () => {
         }
 
         setNext(next + 1);
-        setShowNext(false);
     };
 
     return (
@@ -120,30 +115,22 @@ const Quiz = () => {
                         className={{ header: classes.header }}
                     >
                         <div className={classes.buttonContainer}>
-                            {showNext ? (
+                            <Stack spacing={2} direction='row'>
                                 <Button
-                                    endIcon={<NavigateNextIcon />}
-                                    label={nextButtonLabel}
-                                    onClick={handleNext}
+                                    startIcon={<WarningIcon />}
+                                    label={buttons.labels.phishing}
+                                    onClick={() =>
+                                        handleChoice(CHOICES.PHISHING)
+                                    }
                                 />
-                            ) : (
-                                <Stack spacing={2} direction='row'>
-                                    <Button
-                                        startIcon={<WarningIcon />}
-                                        label={buttons.labels.phishing}
-                                        onClick={() =>
-                                            handleChoice(CHOICES.PHISHING)
-                                        }
-                                    />
-                                    <Button
-                                        endIcon={<MarkEmailReadIcon />}
-                                        label={buttons.labels.legitimate}
-                                        onClick={() =>
-                                            handleChoice(CHOICES.LEGITIMATE)
-                                        }
-                                    />
-                                </Stack>
-                            )}
+                                <Button
+                                    endIcon={<MarkEmailReadIcon />}
+                                    label={buttons.labels.legitimate}
+                                    onClick={() =>
+                                        handleChoice(CHOICES.LEGITIMATE)
+                                    }
+                                />
+                            </Stack>
                         </div>
                     </ContentBlock>
                     <Email src={emails[next].src} />

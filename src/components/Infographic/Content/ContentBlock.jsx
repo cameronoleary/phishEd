@@ -2,6 +2,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Card from '@mui/material/Card';
+import ReactHtmlParser from 'react-html-parser';
 import { makeStyles } from '@material-ui/styles';
 import CardContent from '@mui/material/CardContent';
 
@@ -58,7 +59,11 @@ const ContentBlock = ({
             >
                 <CardContent>
                     {icon && <div>{icon}</div>}
-                    {text && <span className={classes.text}>{text}</span>}
+                    {text && (
+                        <span className={classes.text}>
+                            {ReactHtmlParser(text)}
+                        </span>
+                    )}
                     {list && <List {...list} />}
                     {children}
                     {sources && (
