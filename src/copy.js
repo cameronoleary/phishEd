@@ -22,22 +22,28 @@ export default {
                 header: 'Stages in a Phishing Attack',
                 stages: [
                     {
-                        text: 'An attacker sends you a forged email that contains a malicious link.',
+                        text: 'An attacker sends you a forged email that looks like an email sent by your bank.',
                     },
                     {
-                        text: "You the click the link and are brought to a fradulent website on the attacker's web server.",
+                        text: 'The email states that your bank account password has been compromised and contains a link to update your password.',
                     },
                     {
-                        text: 'The seemingly legitimate website asks for your information.',
+                        text: "You the click the link and are brought to a fradulent website on the attacker's web server that looks like your bank's website.",
                     },
                     {
-                        text: 'You give sensitive information.',
+                        text: 'The seemingly legitimate website asks you to log in with your credit card details and password.',
                     },
                     {
-                        text: 'Your sensitive information is transmitted to the attacker.',
+                        text: 'You log in with your credit card details and password.',
                     },
                     {
-                        text: 'The attacker impersonates you and requests a withdrawal from your bank account.',
+                        text: 'Your information is transmitted to the attacker.',
+                    },
+                    {
+                        text: 'The attacker uses your credit card details and password to log into your bank account.',
+                    },
+                    {
+                        text: 'The attacker sends themself money from your account via e-transfer.',
                     },
                     {
                         text: 'Your money is taken by fraud.',
