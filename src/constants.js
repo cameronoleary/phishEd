@@ -4,6 +4,7 @@ export const ROUTES = {
     LANDING_PAGE: '/',
     PREFACE: '/preface',
     QUIZ: '/quiz',
+    REVIEW: '/review',
 };
 
 export const IMAGE_COUNTS = {

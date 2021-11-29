@@ -8,50 +8,35 @@ import { makeStyles } from '@material-ui/styles';
 // Assets
 import HomeIcon from '@mui/icons-material/Home';
 import ReplayIcon from '@mui/icons-material/Replay';
+import GradingIcon from '@mui/icons-material/Grading';
 import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 // Internal
 import Email from './Email';
 import copy from '../../copy';
+import Review from './Review';
 import Button from '../Button';
 import { ROUTES } from '../../constants';
 import { getEmails } from '../../utils/quiz';
 import ContentBlock from '../Infographic/Content/ContentBlock';
 
 const useStyles = makeStyles({
-    button: {
-        width: '8rem',
-        height: '2rem',
-        cursor: 'pointer',
-        marginRight: '1rem',
-        borderRadius: '.313rem',
-        '&:last-child': {
-            marginRight: 0,
-        },
-    },
     buttonContainer: {
         display: 'flex',
         marginTop: '1rem',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
     },
     container: {
         display: 'flex',
         flexWrap: 'wrap',
         padding: '2.5rem',
         textAlign: 'center',
-        alignContent: 'center',
+        alignItems: 'center',
         flexDirection: 'column',
-    },
-    footerContainer: {
-        display: 'flex',
-        justifyContent: 'center',
     },
     header: {
         color: 'black',
-    },
-    paragraph: {
-        width: '100%',
     },
 });
 
@@ -66,8 +51,8 @@ const Quiz = () => {
     const [next, setNext] = useState(0);
     const [score, setScore] = useState(0);
     const [emails, setEmails] = useState([]);
+    const [review, setReview] = useState(false);
     const [finished, setFinished] = useState(false);
-    const [nextButtonLabel, setNextButtonLabel] = useState(buttons.labels.next);
 
     const classes = useStyles();
 
@@ -82,6 +67,8 @@ const Quiz = () => {
             (choice === CHOICES.PHISHING && emails[next].phish) ||
             (choice === CHOICES.LEGITIMATE && !emails[next].phish);
 
+        emails[next].correct = correctChoice;
+
         if (correctChoice) setScore(score + 1);
 
         handleNext();
@@ -91,23 +78,43 @@ const Quiz = () => {
         // User has finished the quiz. Display the score.
         if (next === emails.length - 1) {
             setFinished(true);
-            console.log(`You got ${score}/${emails.length} correct.`);
             return;
         }
 
         setNext(next + 1);
     };
 
+    const handleReview = () => {
+        setReview(true);
+    };
+
     return (
         <div className={classes.container}>
-            {finished && (
-                <ContentBlock
-                    header={`You got ${score}/${emails.length} correct.`}
-                    text={completed.text}
-                    className={{ header: classes.header }}
-                />
+            {review && <Review emails={emails} />}
+            {finished && !review && (
+                <Fade top>
+                    <ContentBlock
+                        header={`You got ${score}/${emails.length} correct.`}
+                        text={completed.text}
+                        className={{ header: classes.header }}
+                    >
+                        <div className={classes.buttonContainer}>
+                            <Button
+                                endIcon={<GradingIcon />}
+                                label={buttons.labels.review}
+                                onClick={() => handleReview()}
+                            />
+                            <Link to={ROUTES.PREFACE}>
+                                <Button
+                                    endIcon={<ReplayIcon />}
+                                    label='Try Again'
+                                />
+                            </Link>
+                        </div>
+                    </ContentBlock>
+                </Fade>
             )}
-            {!finished && (
+            {!finished && !review && (
                 <Fade top>
                     <ContentBlock
                         header={emails[next].name}
@@ -142,7 +149,7 @@ const Quiz = () => {
                         <Link to={ROUTES.LANDING_PAGE}>
                             <Button startIcon={<HomeIcon />} label='Home' />
                         </Link>
-                        {finished && (
+                        {review && (
                             <Link to={ROUTES.PREFACE}>
                                 <Button
                                     endIcon={<ReplayIcon />}

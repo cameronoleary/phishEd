@@ -336,10 +336,16 @@ export default {
         buttons: {
             labels: {
                 next: 'Next',
+                previous: 'Previous',
                 phishing: 'Phishing',
                 legitimate: 'Legitimate',
                 finishQuiz: 'Finish Quiz',
+                review: 'Review',
             },
+        },
+        review: {
+            correct: 'Good job! You identified this one correctly.',
+            incorrect: "It looks like you weren't able to identify this one.",
         },
     },
 };
