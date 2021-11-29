@@ -47,12 +47,8 @@ const Content = () => {
             <Fade bottom>
                 <ContentBlock {...copyPrefix.whatIsPhishing} />
             </Fade>
-            <Fade bottom>
-                <Stages />
-            </Fade>
-            <Fade bottom>
-                <CommonTypes />
-            </Fade>
+            <Stages />
+            <CommonTypes />
             <div className={classes.factsContainer}>
                 {copyPrefix.facts.map((fact, idx) => {
                     if (flag === 0) {

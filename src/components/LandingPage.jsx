@@ -1,5 +1,5 @@
 // External
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/styles';
 
 // Internal
@@ -17,6 +17,10 @@ const useStyles = makeStyles({
 
 const LandingPage = () => {
     const classes = useStyles();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className={classes.container}>

@@ -152,23 +152,21 @@ const Quiz = () => {
                     </div>
                 </Fade>
             )}
-            <Fade bottom>
-                <div className={classes.footerContainer}>
-                    <Stack spacing={2} direction='row'>
-                        <Link to={ROUTES.LANDING_PAGE}>
-                            <Button startIcon={<HomeIcon />} label='Home' />
+            <div className={classes.footerContainer}>
+                <Stack spacing={2} direction='row'>
+                    <Link to={ROUTES.LANDING_PAGE}>
+                        <Button startIcon={<HomeIcon />} label='Home' />
+                    </Link>
+                    {review && (
+                        <Link to={ROUTES.PREFACE}>
+                            <Button
+                                endIcon={<ReplayIcon />}
+                                label='Try Again'
+                            />
                         </Link>
-                        {review && (
-                            <Link to={ROUTES.PREFACE}>
-                                <Button
-                                    endIcon={<ReplayIcon />}
-                                    label='Try Again'
-                                />
-                            </Link>
-                        )}
-                    </Stack>
-                </div>
-            </Fade>
+                    )}
+                </Stack>
+            </div>
         </div>
     );
 };
