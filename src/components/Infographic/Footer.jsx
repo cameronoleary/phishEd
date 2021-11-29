@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/styles';
 // Internal
 import copy from '../../copy';
 import Button from '../Button';
-import { ROUTES, PRIMARY_COLOR } from '../../constants';
+import { ROUTES } from '../../constants';
 import ContentBlock from './Content/ContentBlock';
 
 // Assets

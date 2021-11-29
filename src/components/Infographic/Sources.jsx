@@ -67,6 +67,7 @@ const Sources = ({ sources }) => {
                     <li key={idx}>
                         <a
                             target='_blank'
+                            rel='noreferrer'
                             href={source.link}
                             className={classes.link}
                         >
