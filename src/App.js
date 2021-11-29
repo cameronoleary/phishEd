@@ -2,7 +2,6 @@
 import React from 'react';
 import Wave from 'react-wavify';
 import { makeStyles } from '@material-ui/styles';
-import { AnimatedSwitch } from 'react-router-transition';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Internal

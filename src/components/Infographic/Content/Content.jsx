@@ -8,7 +8,6 @@ import Stages from '../Stages';
 import copy from '../../../copy';
 import CommonTypes from '../CommonTypes';
 import ContentBlock from './ContentBlock';
-import { PRIMARY_COLOR } from '../../../constants';
 
 // Assets
 import LockOpenIcon from '@mui/icons-material/LockOpen';
@@ -43,7 +42,7 @@ const Content = () => {
     ];
 
     return (
-        <div>
+        <div data-testid='content'>
             <Fade bottom>
                 <ContentBlock {...copyPrefix.whatIsPhishing} />
             </Fade>
@@ -55,8 +54,8 @@ const Content = () => {
                         flag = 1;
 
                         return (
-                            <Fade top>
-                                <div key={idx} className={classes.fact}>
+                            <Fade key={idx} top>
+                                <div className={classes.fact}>
                                     <ContentBlock
                                         icon={icons[idx]}
                                         className={{ card: classes.card }}
@@ -70,8 +69,8 @@ const Content = () => {
                     flag = 0;
 
                     return (
-                        <Fade bottom>
-                            <div key={idx} className={classes.fact}>
+                        <Fade key={idx} bottom>
+                            <div className={classes.fact}>
                                 <ContentBlock
                                     icon={icons[idx]}
                                     className={{ card: classes.card }}

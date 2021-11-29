@@ -47,6 +47,8 @@ const useStyles = makeStyles({
 const Sources = ({ sources }) => {
     const classes = useStyles();
 
+    if (!sources) return null;
+
     let sourcePrefix = '';
 
     if (sources.sourcePrefix) {

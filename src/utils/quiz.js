@@ -1,3 +1,4 @@
+// Internal
 import { PHISHING_IMAGES, LEGITIMATE_IMAGES } from './img';
 import { IMAGE_COUNTS, IMAGE_PICK_LIMITS } from '../constants';
 

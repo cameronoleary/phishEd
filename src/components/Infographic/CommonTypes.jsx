@@ -14,8 +14,8 @@ const CommonTypes = () => {
     return (
         <ContentBlock header={header} text={text}>
             {list.items.map((item, idx) => (
-                <Fade bottom>
-                    <ContentBlock key={idx}>
+                <Fade key={idx} bottom>
+                    <ContentBlock>
                         <ListItem {...item} />
                     </ContentBlock>
                 </Fade>

@@ -1,15 +1,18 @@
+// External
 import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Stack from '@mui/material/Stack';
 import { makeStyles } from '@material-ui/styles';
 
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-
+// Internal
 import Email from './Email';
 import copy from '../../copy';
 import Button from '../Button';
 import ContentBlock from '../Infographic/Content/ContentBlock';
+
+// Assets
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 const useStyles = makeStyles({
     container: {
@@ -33,8 +36,9 @@ const Review = ({ emails }) => {
     const { buttons, review } = copy.quiz;
 
     const classes = useStyles();
-
     const [next, setNext] = useState(0);
+
+    if (!emails) return null;
 
     const handleNext = (inc) => {
         setNext(next + inc);

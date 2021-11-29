@@ -20,6 +20,8 @@ const useStyles = makeStyles({
 const ListRenderer = ({ items }) => {
     const classes = useStyles();
 
+    if (!items) return null;
+
     return (
         <ul className={classes.list}>
             {items.map((item, idx) => (

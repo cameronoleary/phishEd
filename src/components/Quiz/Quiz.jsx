@@ -5,13 +5,6 @@ import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import { makeStyles } from '@material-ui/styles';
 
-// Assets
-import HomeIcon from '@mui/icons-material/Home';
-import ReplayIcon from '@mui/icons-material/Replay';
-import GradingIcon from '@mui/icons-material/Grading';
-import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
-import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
-
 // Internal
 import Email from './Email';
 import copy from '../../copy';
@@ -20,6 +13,13 @@ import Button from '../Button';
 import { ROUTES } from '../../constants';
 import { getEmails } from '../../utils/quiz';
 import ContentBlock from '../Infographic/Content/ContentBlock';
+
+// Assets
+import HomeIcon from '@mui/icons-material/Home';
+import ReplayIcon from '@mui/icons-material/Replay';
+import GradingIcon from '@mui/icons-material/Grading';
+import WarningIcon from '@mui/icons-material/ReportGmailerrorred';
+import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 const useStyles = makeStyles({
     buttonContainer: {
