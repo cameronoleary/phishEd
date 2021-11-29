@@ -35,6 +35,12 @@ const useStyles = makeStyles({
         alignItems: 'center',
         flexDirection: 'column',
     },
+    contentContainer: {
+        display: 'flex',
+        padding: '2.5rem',
+        textAlign: 'center',
+        alignItems: 'center',
+    },
     header: {
         color: 'black',
     },
@@ -116,31 +122,33 @@ const Quiz = () => {
             )}
             {!finished && !review && (
                 <Fade top>
-                    <ContentBlock
-                        header={emails[next].name}
-                        text={emails[next].description}
-                        className={{ header: classes.header }}
-                    >
-                        <div className={classes.buttonContainer}>
-                            <Stack spacing={2} direction='row'>
-                                <Button
-                                    startIcon={<WarningIcon />}
-                                    label={buttons.labels.phishing}
-                                    onClick={() =>
-                                        handleChoice(CHOICES.PHISHING)
-                                    }
-                                />
-                                <Button
-                                    endIcon={<MarkEmailReadIcon />}
-                                    label={buttons.labels.legitimate}
-                                    onClick={() =>
-                                        handleChoice(CHOICES.LEGITIMATE)
-                                    }
-                                />
-                            </Stack>
-                        </div>
-                    </ContentBlock>
-                    <Email src={emails[next].src} />
+                    <div className={classes.contentContainer}>
+                        <ContentBlock
+                            header={emails[next].name}
+                            text={emails[next].description}
+                            className={{ header: classes.header }}
+                        >
+                            <div className={classes.buttonContainer}>
+                                <Stack spacing={2} direction='row'>
+                                    <Button
+                                        startIcon={<WarningIcon />}
+                                        label={buttons.labels.phishing}
+                                        onClick={() =>
+                                            handleChoice(CHOICES.PHISHING)
+                                        }
+                                    />
+                                    <Button
+                                        endIcon={<MarkEmailReadIcon />}
+                                        label={buttons.labels.legitimate}
+                                        onClick={() =>
+                                            handleChoice(CHOICES.LEGITIMATE)
+                                        }
+                                    />
+                                </Stack>
+                            </div>
+                        </ContentBlock>
+                        <Email src={emails[next].src} />
+                    </div>
                 </Fade>
             )}
             <Fade bottom>

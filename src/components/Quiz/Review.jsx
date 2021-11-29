@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         flexWrap: 'wrap',
         textAlign: 'center',
         alignItems: 'center',
-        flexDirection: 'column',
+        flexDirection: 'row',
     },
     buttonContainer: {
         display: 'flex',
