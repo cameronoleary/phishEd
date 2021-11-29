@@ -38,6 +38,7 @@ const useStyles = makeStyles({
     contentContainer: {
         display: 'flex',
         padding: '2.5rem',
+        marginLeft: '1rem',
         textAlign: 'center',
         alignItems: 'center',
     },

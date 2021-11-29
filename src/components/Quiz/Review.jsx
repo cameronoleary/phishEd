@@ -14,7 +14,7 @@ import ContentBlock from '../Infographic/Content/ContentBlock';
 const useStyles = makeStyles({
     container: {
         display: 'flex',
-        flexWrap: 'wrap',
+        marginLeft: '1rem',
         textAlign: 'center',
         alignItems: 'center',
         flexDirection: 'row',
