@@ -18,6 +18,7 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
+// A reusable component for the stages in a phishing attack.
 const Stages = () => {
     const { header, sources, stages } =
         copy.landingPage.content.stagesInAPhishingAttack;

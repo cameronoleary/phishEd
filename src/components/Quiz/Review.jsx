@@ -34,7 +34,6 @@ const useStyles = makeStyles({
 
 const Review = ({ emails }) => {
     const { buttons, review } = copy.quiz;
-
     const classes = useStyles();
     const [next, setNext] = useState(0);
 

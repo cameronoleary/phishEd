@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     },
 });
 
-const Infographic = () => {
+const ContentFrame = () => {
     const classes = useStyles();
 
     return (
@@ -25,4 +25,4 @@ const Infographic = () => {
     );
 };
 
-export default Infographic;
+export default ContentFrame;

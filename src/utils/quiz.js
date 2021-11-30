@@ -2,11 +2,12 @@
 import { PHISHING_IMAGES, LEGITIMATE_IMAGES } from './img';
 import { IMAGE_COUNTS, IMAGE_PICK_LIMITS } from '../constants';
 
+// Returns a random number between min and max.
 const getRandomIndex = (min, max) =>
     Math.floor(Math.random() * (max - min)) + min;
 
-// Durstenfeld shuffle.
-// https://stackoverflow.com/a/12646864
+// Shuffles an array.
+// Durstenfeld shuffle - https://stackoverflow.com/a/12646864
 const shuffle = (arr) => {
     const newArr = [...arr];
 
@@ -18,6 +19,7 @@ const shuffle = (arr) => {
     return newArr;
 };
 
+// Returns an array of randomly chosen email images within the pick limits.
 export const getEmails = () => {
     const { PHISH_IMAGE_COUNT, LEGIT_IMAGE_COUNT } = IMAGE_COUNTS;
     const { PHISH_PICK_LIMIT, LEGIT_PICK_LIMIT } = IMAGE_PICK_LIMITS;

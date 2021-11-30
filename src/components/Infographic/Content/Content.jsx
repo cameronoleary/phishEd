@@ -30,9 +30,10 @@ const useStyles = makeStyles({
 });
 
 const Content = () => {
+    // Defines whether to fade a fact in from the top (0) or bottom (1).
     let flag = 0;
-    const classes = useStyles();
 
+    const classes = useStyles();
     const copyPrefix = copy.landingPage.content;
 
     const icons = [

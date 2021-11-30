@@ -28,7 +28,6 @@ const useStyles = makeStyles({
 
 const Footer = () => {
     const classes = useStyles();
-
     const { footer } = copy.landingPage;
 
     return (

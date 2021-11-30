@@ -52,13 +52,11 @@ const CHOICES = {
 
 const Quiz = () => {
     const { completed, buttons } = copy.quiz;
-
     const [next, setNext] = useState(0);
     const [score, setScore] = useState(0);
     const [emails, setEmails] = useState([]);
     const [review, setReview] = useState(false);
     const [finished, setFinished] = useState(false);
-
     const classes = useStyles();
 
     useEffect(() => {

@@ -1,6 +1,7 @@
 // External
 import React from 'react';
 
+// App logo.
 const Logo = () => {
     return (
         <svg

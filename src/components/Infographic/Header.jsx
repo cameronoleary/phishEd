@@ -32,6 +32,7 @@ const useStyles = makeStyles({
     },
 });
 
+// A reusable component for the app logo, name, and introduction.
 const Header = () => {
     const classes = useStyles();
 

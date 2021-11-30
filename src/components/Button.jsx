@@ -5,6 +5,7 @@ import { Button as MaterialButton } from '@mui/material';
 // Internal
 import { PRIMARY_COLOR } from '../constants';
 
+// A wrapper for MUI's Button component.
 const Button = ({ startIcon, endIcon, label, onClick }) => (
     <MaterialButton
         sx={{

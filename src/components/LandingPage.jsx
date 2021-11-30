@@ -19,6 +19,7 @@ const LandingPage = () => {
     const classes = useStyles();
 
     useEffect(() => {
+        // Always scroll to the top of the landing page when visited.
         window.scrollTo(0, 0);
     }, []);
 

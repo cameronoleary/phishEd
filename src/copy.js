@@ -1,3 +1,4 @@
+// Defines all text-based content in the app.
 // eslint-disable-next-line
 export default {
     title: 'phishEd',

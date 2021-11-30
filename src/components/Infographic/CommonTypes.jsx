@@ -7,6 +7,7 @@ import copy from '../../copy';
 import ListItem from './List/ListItem';
 import ContentBlock from './Content/ContentBlock';
 
+// A reusable component for the common types of phishing attacks.
 const CommonTypes = () => {
     const { header, text, list } =
         copy.landingPage.content.commonTypesOfPhishing;

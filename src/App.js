@@ -26,15 +26,15 @@ const App = () => {
     return (
         <>
             <Wave
-                className={classes.wave}
+                options={{
+                    points: 8,
+                    height: 20,
+                    speed: 0.15,
+                    amplitude: 50,
+                }}
                 fill='#FFFFFF'
                 paused={false}
-                options={{
-                    height: 20,
-                    amplitude: 50,
-                    speed: 0.15,
-                    points: 8,
-                }}
+                className={classes.wave}
             />
             <Router>
                 <Switch>

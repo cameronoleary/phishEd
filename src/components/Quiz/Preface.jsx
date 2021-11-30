@@ -32,9 +32,9 @@ const useStyles = makeStyles({
     },
 });
 
+// Serves as the preface to the quiz, giving the user pointers to do well.
 const Preface = () => {
     const classes = useStyles();
-
     const { nav, preface } = copy;
 
     return (
