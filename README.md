@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# phish(ing)Ed(ucation)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An online platform aimed to help educate people about phishing attacks.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+-   [About](#about)
+-   [Screenshots](#screenshots)
+-   [Technologies](#technologies)
+-   [Installation and Setup](#installation-and-setup)
+-   [License](#license)
 
-### `yarn start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+There are many online tools and resources for learning about phishing; however, people continue to fall victim to phishing attacks every year [2]. In _Don’t click: towards an effective anti-phishing training. A comparative literature review_, a paper by Daniel Jampen, Gürkan Gür, Thomas Sutter, and Bernhard Tellenbach, it was discovered that educational tools about phishing are only a limited subset of what is necessary for long-term recognition of phishing attacks [1]. In order to help satisfy this subset of necessities for long-term recognition, more anti-phishing material should be made available on the web. The goal of this project is to contribute to the number of available resources by helping raise awareness about phishing. phishEd provides a way for people to quickly consume information that is necessary in keeping their personal information safe from phishing attacks.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[1] Jampen, D., Gür, G., Sutter, T., & Tellenbach, B. (2020). Don’t click: towards an effective anti-phishing training. A comparative literature review. _Human-Centric Computing and Information Sciences, 10_(1). https://doi.org/10.1186/s13673-020-00237-7
 
-### `yarn test`
+[2] Rosenthal, M. (2021, September 16). _Must-Know Phishing Statistics: Updated 2021_. Tessian. https://www.tessian.com/blog/phishing-statistics-2020
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `yarn build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Framework: [React](https://reactjs.org/)
+-   Package managers: [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/)
+-   Programming languages: JavaScript, HTML, CSS/JSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation and Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Download or clone this repository. You will need to install [node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) globally on your machine if you haven't already done so. Once you've installed `npm`, you should also install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable).
 
-### `yarn eject`
+-   To install the required packages, run `npm install` or `yarn install`.
+-   To run the test suite, run `npm test a`.
+-   To start the server, run `npm start` or `yarn start`.
+-   To visit the app, go to `localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
