@@ -2,9 +2,9 @@
 	<img src="src/images/phishEd-logo.svg" alt="logo" height="200px">
 </p>
 
-# **phish**(ing)**Ed**(ucation)
+# phish(ing)Ed(ucation)
 
-An online platform aimed to help educate people about phishing attacks.
+phishEd is an online platform aimed to help educate people about phishing attacks.
 
 ## Table of Contents
 
