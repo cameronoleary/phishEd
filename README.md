@@ -1,3 +1,5 @@
+<img src="src/images/phishEd-logo.svg" height="200px" align="center"/>
+
 # phish(ing)Ed(ucation)
 
 An online platform aimed to help educate people about phishing attacks.
