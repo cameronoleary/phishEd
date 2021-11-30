@@ -1,4 +1,6 @@
-<img src="src/images/phishEd-logo.svg" height="200px" align="center"/>
+<p align="center">
+	<img src="src/images/phishEd-logo.svg" alt="logo" height="200px">
+</p>
 
 # phish(ing)Ed(ucation)
 
