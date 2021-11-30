@@ -23,9 +23,7 @@ import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 const useStyles = makeStyles({
     buttonContainer: {
-        display: 'flex',
         marginTop: '1rem',
-        justifyContent: 'space-evenly',
     },
     container: {
         display: 'flex',
@@ -130,22 +128,20 @@ const Quiz = () => {
                             className={{ header: classes.header }}
                         >
                             <div className={classes.buttonContainer}>
-                                <Stack spacing={2} direction='row'>
-                                    <Button
-                                        startIcon={<WarningIcon />}
-                                        label={buttons.labels.phishing}
-                                        onClick={() =>
-                                            handleChoice(CHOICES.PHISHING)
-                                        }
-                                    />
-                                    <Button
-                                        endIcon={<MarkEmailReadIcon />}
-                                        label={buttons.labels.legitimate}
-                                        onClick={() =>
-                                            handleChoice(CHOICES.LEGITIMATE)
-                                        }
-                                    />
-                                </Stack>
+                                <Button
+                                    startIcon={<WarningIcon />}
+                                    label={buttons.labels.phishing}
+                                    onClick={() =>
+                                        handleChoice(CHOICES.PHISHING)
+                                    }
+                                />
+                                <Button
+                                    endIcon={<MarkEmailReadIcon />}
+                                    label={buttons.labels.legitimate}
+                                    onClick={() =>
+                                        handleChoice(CHOICES.LEGITIMATE)
+                                    }
+                                />
                             </div>
                         </ContentBlock>
                         <Email src={emails[next].src} />

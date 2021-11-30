@@ -332,7 +332,7 @@ export default {
     },
     quiz: {
         completed: {
-            text: 'Thanks for taking our quiz!',
+            text: 'Thanks for taking our quiz! Click review to review your answers or try again to reattempt the quiz.',
         },
         buttons: {
             labels: {

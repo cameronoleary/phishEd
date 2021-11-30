@@ -9,7 +9,11 @@ const Button = ({ startIcon, endIcon, label, onClick }) => (
     <MaterialButton
         sx={{
             fontWeight: 'bold',
+            marginRight: '1rem',
             backgroundColor: PRIMARY_COLOR,
+            '&:last-child': {
+                marginRight: 0,
+            },
         }}
         variant='contained'
         startIcon={startIcon}
