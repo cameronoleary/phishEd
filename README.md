@@ -2,9 +2,9 @@
 	<img src="src/images/phishEd-logo.svg" alt="logo" height="200px">
 </p>
 
-# **phish**(ing)**Ed**(ucation)
+# phish(ing)Ed(ucation)
 
-An online platform aimed to help educate people about phishing attacks.
+phishEd is an online platform aimed to help educate people about phishing attacks.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ An online platform aimed to help educate people about phishing attacks.
 
 ## About
 
-There are many online tools and resources for learning about phishing; however, people continue to fall victim to phishing attacks every year [2]. In _Don’t click: towards an effective anti-phishing training. A comparative literature review_, a paper by Daniel Jampen, Gürkan Gür, Thomas Sutter, and Bernhard Tellenbach, it was discovered that educational tools about phishing are only a limited subset of what is necessary for long-term recognition of phishing attacks [1]. In order to help satisfy this subset of necessities for long-term recognition, more anti-phishing material should be made available on the web. The goal of this project is to contribute to the number of anti-phishing educational tools currently available by creating a platform to help raise awareness about phishing. phishEd provides a quick and easy way for people to learn about phishing and how they can keep their personal information safe from cybercriminals.
+There are many online tools and resources for learning about phishing; however, people continue to fall victim to phishing attacks every year [2]. In _Don’t click: towards an effective anti-phishing training. A comparative literature review_, a paper by Daniel Jampen, Gürkan Gür, Thomas Sutter, and Bernhard Tellenbach, it was discovered that educational tools about phishing are only a limited subset of what is necessary for long-term recognition of phishing attacks [1]. In order to help satisfy this subset of necessities for long-term recognition, more anti-phishing material should be made available on the web. The goal of this project is to contribute to the number of anti-phishing educational tools currently available on the internet. phishEd provides a quick and easy way for people to learn about phishing and how they can keep their personal information safe from cybercriminals.
 
 [1] Jampen, D., Gür, G., Sutter, T., & Tellenbach, B. (2020). Don’t click: towards an effective anti-phishing training. A comparative literature review. _Human-Centric Computing and Information Sciences, 10_(1). https://doi.org/10.1186/s13673-020-00237-7
 
