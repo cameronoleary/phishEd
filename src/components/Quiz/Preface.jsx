@@ -12,9 +12,9 @@ import { ROUTES } from '../../constants';
 import ContentBlock from '../Infographic/Content/ContentBlock';
 
 // Assets
+import HomeIcon from '@mui/icons-material/Home';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 const useStyles = makeStyles({
     buttonContainer: {
@@ -48,8 +48,8 @@ const Preface = () => {
                         <Stack spacing={2} direction='row'>
                             <Link to={ROUTES.LANDING_PAGE}>
                                 <Button
-                                    startIcon={<NavigateBeforeIcon />}
-                                    label={nav.back}
+                                    startIcon={<HomeIcon />}
+                                    label={nav.home}
                                 />
                             </Link>
                             <Link to={ROUTES.QUIZ}>

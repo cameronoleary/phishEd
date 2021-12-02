@@ -336,6 +336,9 @@ export const PHISHING_IMAGES = [
                     name: '<span style="background-color: #FFFF00">@app-strava.com</span>: this is a fake email domain. The real email domain for Strava is <b>@strava.com</b>.',
                 },
                 {
+                    name: '<span style="background-color: #0000FF">Strava logo</span>: this is the <b>real logo</b> for Strava. This is used to trick you into thinking this is a legitimate email.',
+                },
+                {
                     name: '<span style="background-color: #00FF00">https://www.app-strava.com/user/samantha-x</span>: this is a malicious (although HTTPS secure) link. The web domain for legitimate links to Strava\'s website is <b>strava.com</b>.',
                 },
             ],
