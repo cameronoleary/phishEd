@@ -30,7 +30,7 @@ export default {
                         text: 'The email states that your bank account password has been compromised and <b style="color: #F26721">contains a link</b> to update your password.',
                     },
                     {
-                        text: "You click the link and are brought to a <b style='color: #F26721'>fradulent website</b> on the attacker's web server that looks like your bank's website.",
+                        text: "You click the link and are brought to a <b style='color: #F26721'>fraudulent website</b> on the attacker's web server that looks like your bank's website.",
                     },
                     {
                         text: 'The seemingly legitimate website asks you to log in with your <b style="color: #F26721">bank card details and password</b>.',
