@@ -45,11 +45,15 @@ const ContentBlock = ({
     return (
         <div>
             {header && (
-                <span className={clsx(className.header, classes.header)}>
+                <span
+                    data-testid='content-block-header'
+                    className={clsx(className.header, classes.header)}
+                >
                     {header}
                 </span>
             )}
             <Card
+                data-testid='content-block-card'
                 sx={{
                     maxWidth: '50rem',
                     borderRadius: '.938rem',
@@ -57,17 +61,23 @@ const ContentBlock = ({
                 }}
                 className={clsx(className.card, classes.container)}
             >
-                <CardContent>
-                    {icon && <div>{icon}</div>}
+                <CardContent data-testid='content-block-card-content'>
+                    {icon && <div data-testid='content-block-icon'>{icon}</div>}
                     {text && (
-                        <span className={classes.text}>
+                        <span
+                            data-testid='content-block-text'
+                            className={classes.text}
+                        >
                             {ReactHtmlParser(text)}
                         </span>
                     )}
                     {list && <List {...list} />}
                     {children}
                     {sources && (
-                        <div className={classes.sources}>
+                        <div
+                            data-testid='content-block-sources'
+                            className={classes.sources}
+                        >
                             <Sources sources={sources} />
                         </div>
                     )}

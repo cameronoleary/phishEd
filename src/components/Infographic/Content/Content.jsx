@@ -43,7 +43,7 @@ const Content = () => {
     ];
 
     return (
-        <div data-testid='content'>
+        <div>
             <Fade bottom>
                 <ContentBlock {...copyPrefix.whatIsPhishing} />
             </Fade>

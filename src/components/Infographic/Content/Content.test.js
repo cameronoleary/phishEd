@@ -1,8 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Content from './Content';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Content />, div);
+describe('Content', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(<Content />);
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

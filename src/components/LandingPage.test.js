@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import LandingPage from './LandingPage';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(
-        <Router>
-            <LandingPage />
-        </Router>,
-        div
-    );
+describe('LandingPage', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(
+            <Router>
+                <LandingPage />
+            </Router>
+        );
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

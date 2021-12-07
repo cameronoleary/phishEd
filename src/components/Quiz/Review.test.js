@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Review from './Review';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(
-        <Router>
-            <Review />
-        </Router>,
-        div
-    );
+describe('Review', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(
+            <Router>
+                <Review />
+            </Router>
+        );
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

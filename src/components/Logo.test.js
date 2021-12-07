@@ -1,8 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Logo from './Logo';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Logo />, div);
+describe('Logo', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(<Logo />);
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

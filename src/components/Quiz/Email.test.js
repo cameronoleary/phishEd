@@ -1,8 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Email from './Email';
+import AbcIcon from '@mui/icons-material/Abc';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Email />, div);
+describe('Email', () => {
+    let element;
+
+    beforeEach(() => {
+        const src = <img alt='icon' src={AbcIcon} />;
+        element = render(<Email src={src} />);
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

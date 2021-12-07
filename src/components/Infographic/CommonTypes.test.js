@@ -1,8 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import CommonTypes from './CommonTypes';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<CommonTypes />, div);
+describe('CommonTypes', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(<CommonTypes />);
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

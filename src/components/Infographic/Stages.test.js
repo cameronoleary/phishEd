@@ -1,8 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Stages from './Stages';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Stages />, div);
+describe('Stages', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(<Stages />);
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

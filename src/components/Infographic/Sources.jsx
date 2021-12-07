@@ -61,8 +61,8 @@ const Sources = ({ sources }) => {
 
     return (
         <div className={classes.container}>
-            <span>{sourcePrefix}</span>
-            <ul className={classes.list}>
+            <span data-testid='sources-source-prefix'>{sourcePrefix}</span>
+            <ul data-testid='sources-source-list' className={classes.list}>
                 {sources.sourceContent.map((source, idx) => (
                     <li key={idx}>
                         <a

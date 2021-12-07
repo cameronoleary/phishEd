@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ContentFrame from './ContentFrame';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(
-        <Router>
-            <ContentFrame />
-        </Router>,
-        div
-    );
+describe('ContentFrame', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(
+            <Router>
+                <ContentFrame />
+            </Router>
+        );
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
 });

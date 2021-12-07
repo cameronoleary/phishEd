@@ -34,7 +34,10 @@ const Footer = () => {
         <Fade bottom>
             <ContentBlock icon={<QuizIcon fontSize='large' />}>
                 <div className={classes.container}>
-                    <span className={classes.paragraph}>
+                    <span
+                        data-testid='footer-paragraph'
+                        className={classes.paragraph}
+                    >
                         {footer.paragraph}
                     </span>
                     <Link to={ROUTES.PREFACE}>

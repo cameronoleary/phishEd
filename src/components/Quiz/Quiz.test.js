@@ -1,14 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Quiz from './Quiz';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(
-        <Router>
-            <Quiz />
-        </Router>,
-        div
-    );
+describe('Quiz', () => {
+    let element;
+
+    beforeEach(() => {
+        element = render(
+            <Router>
+                <Quiz />
+            </Router>
+        );
+    });
+
+    it('renders component', () => {
+        expect(element).toBeTruthy();
+    });
+
+    it('renders content', () => {
+        expect(element.getByTestId('quiz-content')).toBeTruthy();
+    });
+
+    it('renders footer', () => {
+        expect(element.getByTestId('quiz-footer')).toBeTruthy();
+    });
 });

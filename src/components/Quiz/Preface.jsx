@@ -44,7 +44,10 @@ const Preface = () => {
                     icon={<LightbulbIcon fontSize='large' />}
                     {...preface}
                 >
-                    <div className={classes.buttonContainer}>
+                    <div
+                        data-testid='preface-buttons'
+                        className={classes.buttonContainer}
+                    >
                         <Stack spacing={2} direction='row'>
                             <Link to={ROUTES.LANDING_PAGE}>
                                 <Button

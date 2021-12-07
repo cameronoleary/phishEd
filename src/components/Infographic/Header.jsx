@@ -42,7 +42,9 @@ const Header = () => {
                 <Logo />
             </Fade>
             <Fade right>
-                <span className={classes.title}>{copy.title}</span>
+                <span data-testid='header-title' className={classes.title}>
+                    {copy.title}
+                </span>
             </Fade>
             <Fade bottom>
                 <ContentBlock

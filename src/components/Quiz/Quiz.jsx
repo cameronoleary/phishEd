@@ -119,7 +119,10 @@ const Quiz = () => {
             )}
             {!finished && !review && (
                 <Fade top>
-                    <div className={classes.contentContainer}>
+                    <div
+                        data-testid='quiz-content'
+                        className={classes.contentContainer}
+                    >
                         <ContentBlock
                             header={emails[next].name}
                             text={emails[next].description}
@@ -146,7 +149,7 @@ const Quiz = () => {
                     </div>
                 </Fade>
             )}
-            <div className={classes.footerContainer}>
+            <div data-testid='quiz-footer' className={classes.footerContainer}>
                 <Stack spacing={2} direction='row'>
                     <Link to={ROUTES.LANDING_PAGE}>
                         <Button startIcon={<HomeIcon />} label='Home' />
