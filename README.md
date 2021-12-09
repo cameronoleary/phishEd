@@ -32,6 +32,16 @@ Anti-phishing educational tools contribute to long-term recognition and knowledg
 
 ## Screenshots
 
+<p align="center">
+	<img src="src/images/readme/wip.png" alt="what is phishing">
+</p>
+<p align="center">
+	<img src="src/images/readme/fp.png" alt="facts and prevention">
+</p>
+<p align="center">
+	<img src="src/images/readme/q.png" alt="quiz">
+</p>
+
 ## Technologies
 
 -   Framework: [React](https://reactjs.org/)
