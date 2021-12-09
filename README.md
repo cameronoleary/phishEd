@@ -18,11 +18,17 @@ https://phished.netlify.app
 
 ## About
 
-There are many online tools and resources for learning about phishing; however, people continue to fall victim to phishing attacks every year [2]. In _Don’t click: towards an effective anti-phishing training. A comparative literature review_, a paper by Daniel Jampen, Gürkan Gür, Thomas Sutter, and Bernhard Tellenbach, it was discovered that educational tools about phishing are only a limited subset of what is necessary for long-term recognition of phishing attacks [1]. In order to help satisfy this subset of necessities for long-term recognition, more anti-phishing material should be made available on the web. The goal of this project is to contribute to the number of anti-phishing educational tools currently available on the internet. phishEd provides a quick and easy way for people to learn about phishing and how they can keep their personal information safe from cybercriminals.
+Anti-phishing educational tools contribute to long-term recognition and knowledge retention of phishing attacks [1]. With a substantial increase in phishing attacks every year [2], more anti-phishing platforms should be made available on the web for individuals and organizations to better protect themselves. Drawing on research evidence about the effectiveness of anti-phishing training [3] and quiz based evaluation methods [4, 5], I created an open source online platform aimed to help educate users about phishing attacks. The platform allows users to quickly learn about what phishing is, the stages in a phishing attack, the common types of phishing, and how to prevent a phishing attack. In addition to these important components of imparting information about phishing, the also website allows users to test their understanding by taking a short quiz. The quiz presents a series of screenshots of phishing and legitimate emails and the user must verify their authenticity. The limitations of this platform provides an opportunity for developers to contribute to addressing its shortcomings and for researchers to utilize the platform for studies on anti-phishing training.
 
-[1] Jampen, D., Gür, G., Sutter, T., & Tellenbach, B. (2020). Don’t click: towards an effective anti-phishing training. A comparative literature review. _Human-Centric Computing and Information Sciences, 10_(1). https://doi.org/10.1186/s13673-020-00237-7
+[1] Jampen, D., Gür, G., Sutter, T. et al. Don’t click: towards an effective anti-phishing training. A comparative literature review. Hum. Cent. Comput. Inf. Sci. 10, 33 (2020). https://doi.org/10.1186/s13673-020-00237-7
 
-[2] Rosenthal, M. (2021, September 16). _Must-Know Phishing Statistics: Updated 2021_. Tessian. https://www.tessian.com/blog/phishing-statistics-2020
+[2] Federal Bureau of Investigation. (2020). Internet Crime Report 2020. https://www.ic3.gov/Media/PDF/AnnualReport/2020_IC3Report.pdf
+
+[3] Alex Sumner, Xiaohong Yuan, Mohd Anwar & Maranda McBride. (2021). Examining Factors Impacting the Effectiveness of Anti-Phishing Trainings. Journal of Computer Information Systems. https://doi.org/10.1080/08874417.2021.1955638
+
+[4] Jigsaw (Google). (n.d.). Phishing Quiz: Jigsaw. https://phishingquiz.withgoogle.com/
+
+[5] Sophos. (n.d.). Spot the Phish. https://www.sophos.com/en-us/lp/games/play-spot-the-phish.aspx
 
 ## Screenshots
 
