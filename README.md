@@ -4,7 +4,7 @@
 
 # phish(ing)Ed(ucation)
 
-phishEd is an online platform aimed to help educate people about phishing attacks.
+phishEd is an open-source online platform aimed to help educate people about phishing attacks.
 
 https://phished.netlify.app
 
