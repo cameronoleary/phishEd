@@ -12,6 +12,7 @@ import Sources from '../Sources';
 
 const useStyles = makeStyles({
     container: {
+        height: '100%',
         padding: '1rem',
         margin: '1.875rem 0 2.5rem',
     },
@@ -24,6 +25,11 @@ const useStyles = makeStyles({
         color: 'black',
         fontSize: '1.125rem',
         lineHeight: '1.875rem',
+    },
+    top: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
     },
     sources: {
         marginTop: '1rem',
@@ -43,7 +49,7 @@ const ContentBlock = ({
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.top}>
             {header && (
                 <span
                     data-testid='content-block-header'

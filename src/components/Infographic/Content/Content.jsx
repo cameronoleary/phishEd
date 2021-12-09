@@ -15,9 +15,6 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 const useStyles = makeStyles({
-    card: {
-        minHeight: '15.5rem',
-    },
     factsContainer: {
         display: 'flex',
     },
@@ -57,11 +54,7 @@ const Content = () => {
                         return (
                             <Fade key={idx} top>
                                 <div className={classes.fact}>
-                                    <ContentBlock
-                                        icon={icons[idx]}
-                                        className={{ card: classes.card }}
-                                        {...fact}
-                                    />
+                                    <ContentBlock icon={icons[idx]} {...fact} />
                                 </div>
                             </Fade>
                         );
@@ -72,11 +65,7 @@ const Content = () => {
                     return (
                         <Fade key={idx} bottom>
                             <div className={classes.fact}>
-                                <ContentBlock
-                                    icon={icons[idx]}
-                                    className={{ card: classes.card }}
-                                    {...fact}
-                                />
+                                <ContentBlock icon={icons[idx]} {...fact} />
                             </div>
                         </Fade>
                     );
