@@ -24,7 +24,6 @@ import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 const useStyles = makeStyles({
     buttonContainer: {
         display: 'flex',
-        flexWrap: 'wrap',
         marginTop: '1rem',
         justifyContent: 'center',
     },
