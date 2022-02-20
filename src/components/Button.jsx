@@ -9,6 +9,7 @@ import { PRIMARY_COLOR } from '../constants';
 const Button = ({ startIcon, endIcon, label, onClick }) => (
     <MaterialButton
         sx={{
+            width: '9rem',
             fontWeight: 'bold',
             marginRight: '1rem',
             backgroundColor: PRIMARY_COLOR,
